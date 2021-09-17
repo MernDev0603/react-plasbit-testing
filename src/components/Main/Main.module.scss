@@ -1,0 +1,156 @@
+
+.main{
+	padding: 130px 0 50px;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.main_left{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 16%;
+	z-index: -1;
+}
+.main_right{
+	position: absolute;
+	top: 0;
+	right: -90px;
+	width: 61%;
+	z-index: -1;
+}
+.main_inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main_content{
+	width: 46%;
+	position: relative;
+	z-index: 1;
+}
+.main_btns{
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+.main_img{
+	position: relative;
+	width: 46%;
+	.main_image{
+		width: 100%;
+		pointer-events: none;
+	}
+}
+.coin_1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+.coin_2{
+	position: absolute;
+	top: 7%;
+	right: 7%;
+	pointer-events: none;
+}
+.coin_3{
+	position: absolute;
+	bottom: 15%;
+	right: -15%;
+	pointer-events: none;
+}
+.coin_4{
+	position: absolute;
+	bottom: -5%;
+	left: 20%;
+	pointer-events: none;
+}
+.coin_5{
+	position: absolute;
+	bottom: 18%;
+	left: 0;
+	pointer-events: none;
+}
+@media (max-width: 1620px){
+	.main_left{
+		width: 12%;
+	}
+	.main_right{
+		width: 65%;
+	}
+}
+@media (max-width: 1400px){
+	.main_left{
+		display: none;
+	}
+	.main_right{
+		width: 70%;
+	}
+}
+@media (max-width: 1140px){
+	.main_right{
+		width: 75%;
+	}
+}
+@media (max-width: 991px){
+	.main_right{
+		display: none;
+	}
+	.main_inner{
+		flex-wrap: wrap;
+	}
+	.main_content{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.main_img{
+		margin: 0 auto;
+	}
+	.main_btns{
+		justify-content: start;
+		a:first-child{
+			margin-right: 20px;
+		}
+	}
+	.main{
+		background: none!important;
+	}
+
+}
+@media (max-width: 768px){
+	.main_img{
+		width: 70%;
+	}
+}
+
+@media (max-width: 520px){
+	.main_img{
+		width: 100%;
+	}
+	.coin_1,
+	.coin_2{
+		width: 50px;
+	}
+	.coin_3{
+		width: 70px;
+	}
+	.coin_4{
+		width: 60px;
+	}
+	.coin_5{
+		width: 30px;
+	}
+	.main_btns{
+		display: block;
+		a:first-child{
+			margin: 0 auto 20px;
+		}
+		.main_btns_btn{
+			margin: 0 auto 20px;
+		}
+	}
+	
+}

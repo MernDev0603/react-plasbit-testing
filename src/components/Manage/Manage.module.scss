@@ -1,0 +1,27 @@
+.manage{
+	background-size: cover !important;
+	padding: 200px 0;
+}
+.manage_inner{
+	display: flex;
+	justify-content: space-between;
+}
+.manage_content{
+	width: 54%;
+	a{
+		color: #fff;
+	}
+}
+@media (max-width: 991px){
+	.manage_content{
+		width: 100%;
+	}
+}
+@media (max-width: 520px){
+	.manage{
+		padding: 120px 0;
+	}
+	.manage_title .typewriter_span{
+		display: table;
+	}
+}
