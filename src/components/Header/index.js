@@ -1,35 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { Dropdown } from '../Dropdown'
-import styles from './Header.module.scss'
-import logo from 'assets/img/logo.png'
+import logo from 'assets/img/logo.svg'
 import lang from 'assets/img/lang.svg'
-
+import { useResize } from 'hook/useCustomHook'
+import { Accordion } from 'components/Accordion'
+import './Header.css'
 const menus = [
     {
         'title': 'Service',
         'subMenus': [
-            { 'title': 'Card' },
-            { 'title': 'Wallet' },
-            { 'title': 'Calculator' }
+            { 'title': 'Card', 'icon': 'card.svg' },
+            { 'title': 'Wallet', 'icon': 'wallet.svg' },
+            { 'title': 'Calculator', 'icon': 'calculator.svg' }
         ]
     },
     {
         'title': 'Company',
         'subMenus': [
-            { 'title': 'About' },
-            { 'title': 'Careers' },
-            { 'title': 'Privacy' },
-            { 'title': 'Cardholder Agreement' },
-            { 'title': 'Legal' },
-            { 'title': 'Contact Us' },
+            { 'title': 'About', 'icon': 'about.svg' },
+            { 'title': 'Careers', 'icon': 'careers.svg' },
+            { 'title': 'Privacy', 'icon': 'privacy.svg' },
+            { 'title': 'Cardholder Agreement', 'icon': 'cardholder_agreement.svg' },
+            { 'title': 'Legal', 'icon': 'legal.svg' },
+            { 'title': 'Contact Us', 'icon': 'contact_us.svg' },
         ]
     }
 ]
 
+
 function Header() {
     const [isActive, setActive] = useState(false);
     const [burger, setburger] = useState(false);
+    const { isResponsive, isMobile } = useResize()
 
     const toggleClass = () => {
         setActive(!isActive);
@@ -38,19 +41,19 @@ function Header() {
         setburger(!burger);
     };
     return (
-        <header className={styles.header}>
-            <div className={burger ? styles.shadow_active : styles.shadow} onClick={toggleBurger}></div>
+        <header className="header">
+            <div className={burger ? "shadow_active" : "shadow"} onClick={toggleBurger}></div>
             <div className="container-fluid">
-                <div className={styles.header_inner}>
-                    <a href="#" className={styles.logo}>
+                <div className="header_inner">
+                    <a href="#" className="logo">
                         <img src={logo} alt="logo" />
                     </a>
-                    <div className={styles.lang}>
+                    <div className="lang">
                         <li onClick={toggleClass}>
                             <img src={lang}></img>
                             EN
                         </li>
-                        <ul className={isActive ? styles.lang_toggle_active : styles.lang_toggle}>
+                        {/* <ul className={isActive ? "lang_toggle_active" : "lang_toggle"}>
                             <li>
                                 <img src={lang}></img>
                                 FR
@@ -59,30 +62,35 @@ function Header() {
                                 <img src={lang}></img>
                                 RU
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
-                    <div className={styles.btc}>
-                        <select>
+                    <div className="btc">
+                        <span>btc/usd — 45 514.00 $</span>
+                        {/* <select>
                             <option>btc/usd — 45 514.00 $</option>
                             <option>btc/usd — 45 514.00 $</option>
                             <option>btc/usd — 45 514.00 $</option>
-                        </select>
+                        </select> */}
                     </div>
-                    <nav className={burger ? styles.nav_active : styles.nav}>
-                        {menus.map((menu, index) => (
+                    <nav className={burger ? "nav_active" : "nav"}>
+                        {isMobile && <img onClick={toggleBurger} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTE0LjcgMS4zYy0uNC0uNC0xLS40LTEuNCAwTDggNi42IDIuNyAxLjNjLS40LS40LTEtLjQtMS40IDBzLS40IDEgMCAxLjRMNi42IDhsLTUuMyA1LjNjLS40LjQtLjQgMSAwIDEuNC4yLjIuNC4zLjcuM3MuNS0uMS43LS4zTDggOS40bDUuMyA1LjNjLjIuMi41LjMuNy4zcy41LS4xLjctLjNjLjQtLjQuNC0xIDAtMS40TDkuNCA4bDUuMy01LjNjLjQtLjQuNC0xIDAtMS40eiIgZmlsbD0iIzU2NWQ2ZCIvPjwvc3ZnPg==" />}
+                        {!isResponsive && menus.map((menu, index) => (
                             <Dropdown menu={menu} key={index} />
                         ))}
-                        <ul>
+                        {isResponsive && menus.map((menu, index) => (
+                            <Accordion menu={menu} key={index} />
+                        ))}
+                        <ul className="header_menu">
                             <li>
                                 <a href="#">Login</a>
                             </li>
                         </ul>
-                        <div className={styles.lang_mob}>
+                        {/* <div className="lang_mob">
                             <li onClick={toggleClass}>
                                 <img src={lang} alt="language" />
                                 EN
                             </li>
-                            <ul className={isActive ? styles.lang_toggle_active : styles.lang_toggle}>
+                            <ul className={isActive ? "lang_toggle_active" : "lang_toggle"}>
                                 <li>
                                     <img src={lang}></img>
                                     FR
@@ -92,15 +100,15 @@ function Header() {
                                     RU
                                 </li>
                             </ul>
-                        </div>
-                        <div className={styles.btc_mob}>
+                        </div> */}
+                        {/* <div className="btc_mob">
                             <select>
                                 <option>btc/usd — 45 514.00 $</option>
                                 <option>btc/usd — 45 514.00 $</option>
                                 <option>btc/usd — 45 514.00 $</option>
                             </select>
-                        </div>
-                        <a href="#" className={`btn active ${styles.header_btn}`}>Get Started</a>
+                        </div> */}
+                        <a href="#" className={`btn active $"header_btn"`}>Get Started</a>
                     </nav>
                     <span className="nav_toggle" onClick={toggleBurger}>
                         <span className="nav_toggle-item"></span>

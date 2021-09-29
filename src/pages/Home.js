@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { useResize } from '../hook/useCustomHook'
 
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -9,7 +10,6 @@ import { Manage } from '../components/Manage';
 import { Shop } from '../components/Shop';
 import { Trend } from '../components/Trend';
 import { Help } from '../components/Help';
-
 
 const slider = [
     { coin: '', coinName: 'Neo', date: 'Aug 13, 2021 10:00:00', graphic: 'assets/img/graph-1.png', price: 51.83, precent: '+2,06', volume: '$173,562,475' },
@@ -21,8 +21,9 @@ const slider = [
     { coin: '', coinName: 'Litecoin', date: 'Aug 13, 2021 10:00:00', graphic: '', price: 175.84, precent: '+2,06', volume: '$173,562,475' },
 ]
 
-
 function Home() {
+
+    const { isMobile } = useResize()
     var sliderSettings = {
         infinite: true,
         speed: 1500,
@@ -76,9 +77,16 @@ function Home() {
                     <div className="trend_inner">
                         <div className="container">
                             <div className="trend_top">
-                                <h2 className="title">
-                                    Market <span>Trend</span>
-                                </h2>
+                                {isMobile &&
+                                    <h2 className="title">
+                                        Market <span>Trend</span>
+                                    </h2>
+                                }
+                                {!isMobile &&
+                                    <h2 className="title">
+                                        Market <span>Trend</span>
+                                    </h2>
+                                }
                             </div>
                         </div>
                         <Slider {...sliderSettings} className="trend_slider">

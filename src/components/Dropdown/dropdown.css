@@ -1,78 +1,197 @@
 .menu-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .menu-trigger {
-    border-radius: 90px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4px 6px;
-    border: none;
-    vertical-align: middle;
-    transition: box-shadow 0.4s ease;
-    margin-left: auto;
-    text-shadow: 0 1px 1px rgb(0 0 0 / 66%);
-    text-transform: uppercase;
-    display: table;
-    margin-right: 65px;
-    font-family: "Proxima Nova";
-    font-size: 18px;
-    line-height: 48px;
-    color: #ffffff;
-    font-weight: bold;
+    border-radius: 90px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 4px 6px !important;
+    border: none !important;
+    vertical-align: middle !important;
+    transition: box-shadow 0.4s ease !important;
+    margin-left: auto !important;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 66%) !important;
+    text-transform: uppercase !important;
+    display: table !important;
+    margin-right: 65px !important;
+    font-family: "Proxima Nova" !important;
+    font-size: 18px !important;
+    line-height: 48px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.menu-trigger a {
+    text-shadow: 0 1px 1px rgb(0 0 0 / 66%) !important;
+    text-transform: uppercase !important;
+    display: table !important;
+    font-family: "Proxima Nova" !important;
+    font-size: 18px !important;
+    line-height: 48px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 .menu-trigger span {
-    font-weight: 700;
-    vertical-align: middle;
-    font-size: 14px;
-    margin: 0 10px;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+    font-size: 14px !important;
+    margin: 0 10px !important;
 }
 
 .menu-trigger img {
-    border-radius: 90px;
+    border-radius: 90px !important;
 }
 
 .menu {
-    background: #ffffff;
-    border-radius: 8px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 300px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    position: absolute !important;
+    top: 60px !important;
+    right: 0 !important;
+    width: 250px !important;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-20px) !important;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s !important;
 }
 
 .menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
 }
 
 .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.menu li {
-    border-bottom: 1px solid #dddddd;
+/* .menu li {
+    border-bottom: 1px solid #dddddd !important;
+} */
+
+.menu li a {
+    text-decoration: none !important;
+    color: #333333 !important;
+    padding: 15px 20px !important;
+    display: flex !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-right: 0 !important;
+    line-height: 18px !important;
+}
+
+.menu li a img {
+    width: 50px !important;
+}
+
+.menu li a span {
+    padding: 13px !important;
+}
+
+@media (max-width: 1550px) {
+    .menu-trigger {
+        margin-right: 48px !important;
+    }
+}
+
+
+/* .menu-container {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.menu-trigger {
+    border-radius: 90px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 4px 6px !important;
+    border: none !important;
+    vertical-align: middle !important;
+    transition: box-shadow 0.4s ease !important;
+    margin-left: auto !important;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 66%) !important;
+    text-transform: uppercase !important;
+    display: table !important;
+    margin-right: 65px !important;
+    font-family: "Proxima Nova" !important;
+    font-size: 18px !important;
+    line-height: 48px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.menu-trigger span {
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+    font-size: 14px !important;
+    margin: 0 10px !important;
+}
+
+.menu-trigger img {
+    border-radius: 90px !important;
+}
+
+.menu {
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    position: absolute !important;
+    top: 60px !important;
+    right: 0 !important;
+    width: 250px !important;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-20px) !important;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s !important;
+}
+
+.menu.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.menu ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .menu li a {
-    text-decoration: none;
-    color: #333333;
-    padding: 15px 20px;
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
+    text-decoration: none !important;
+    color: #333333 !important;
+    padding: 15px 20px !important;
+    display: flex !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-right: 0 !important;
+    line-height: 18px !important;
 }
+
+.menu li a img {
+    width: 50px !important;
+}
+
+.menu li a span {
+    padding: 13px !important;
+}
+
+@media (max-width: 1550px) {
+    .menu-trigger {
+        margin-right: 48px !important;
+    }
+} */

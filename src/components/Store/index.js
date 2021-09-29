@@ -1,50 +1,55 @@
 import Typewriter from 'typewriter-effect'
+import { useResize } from '../../hook/useCustomHook'
 
-import styles from './Store.module.scss'
-import store from 'assets/img/store.png' 
-import dots from 'assets/img/dots.svg' 
-import check from 'assets/img/check.svg' 
+import './Store.css'
+import store from 'assets/img/store.png'
+import dots from 'assets/img/dots.svg'
+import check from 'assets/img/check.svg'
 function Store() {
-	return (
-        <section className={styles.store}>
+    const { isMobile } = useResize()
+    return (
+        <section className="store">
             <div className="container">
-                <div className={styles.store_inner}>
-                    <div className={styles.store_img}>
-                        <img src={store} alt="plasbit"/>
-                        <span className={styles.store_bg} style={{background: `center/cover url(${dots})`}}></span>
+                <div className="store_inner">
+                    <div className="store_img">
+                        <img src={store} alt="plasbit" />
+                        <span className="store_bg" style={{ background: `center/cover url(${dots})` }}></span>
                     </div>
-                    <div className={styles.store_content}>
-                        <h2 className="title">
-                            Spend and Store
+                    <div className="store_content">
+                        <h2 className="title store_title">
+                            Spend and Store{isMobile ? <br /> : ' '}
                             crypto on {' '}
                             <span>
-                                your{' '}
-                                <Typewriter 
+                                <Typewriter
                                     options={{
                                         autoStart: true,
                                         loop: true,
                                     }}
                                     onInit={(typewriter) => {
-                                        typewriter.typeString("Wallet")
-                                        .pauseFor(2000)
-                                        .deleteAll()
-                                        .typeString("Card")
-                                        .pauseFor(2000)
-                                        .deleteAll()
-                                        .typeString("Terms")
-                                        .pauseFor(2000)
-                                        .start();
+                                        typewriter
+                                            .pauseFor(500)
+                                            .typeString("your Wallet")
+                                            .pauseFor(2000)
+                                            .deleteAll()
+                                            .pauseFor(500)
+                                            .typeString("your Card")
+                                            .pauseFor(2000)
+                                            .deleteAll()
+                                            .pauseFor(500)
+                                            .typeString("your Terms")
+                                            .pauseFor(2000)
+                                            .start();
                                     }}
                                 />
                             </span>
                         </h2>
                         <p className="text">
                             <li>
-                                <img src={check} alt="check"/>
+                                <img src={check} alt="check" />
                                 Multi-Coin Support - Manage BTC, BCH,ETH,ETC,LTC, and all your ERC-20 tokens in one place.
                             </li>
                             <li>
-                                <img src={check} alt="check"/>
+                                <img src={check} alt="check" />
                                 Secure storage - Your keys are protected with Secure Enclave and biometric authentication technology.
                             </li>
                         </p>
@@ -56,4 +61,4 @@ function Store() {
     );
 }
 
-export {Store};
+export { Store };

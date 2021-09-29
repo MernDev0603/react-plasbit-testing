@@ -1,12 +1,16 @@
 import React, { useRef } from "react";
 import "./dropdown.css";
-import { useDetectOutsideClick } from "../../hook/useDetectOutsideClick";
+import { useDetectOutsideClick } from "../../hook/useCustomHook";
+
+function getIcon(icon) {
+    return require('assets/img/' + icon).default
+}
 
 function Dropdown(props) {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
     return (
-        <div className="container">
+        <div>
             <div className="menu-container">
                 <li onClick={() => setIsActive(!isActive)} className="menu-trigger">
                     <a>{props.menu.title}</a>
@@ -18,7 +22,10 @@ function Dropdown(props) {
                     <ul>
                         {props.menu.subMenus.map((subMenu, index) => (
                             <li key={index}>
-                                <a href="#">{subMenu.title}</a>
+                                <a href="#">
+                                    <img src={getIcon(subMenu.icon)} />
+                                    <span>{subMenu.title}</span>
+                                </a>
                             </li>
                         ))}
                     </ul>

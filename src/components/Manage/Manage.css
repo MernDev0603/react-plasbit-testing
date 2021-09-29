@@ -8,20 +8,24 @@
 }
 .manage_content{
 	width: 54%;
-	a{
-		color: #fff;
-	}
+	
 }
+
+.manage_content a{
+	color: #fff;
+}
+
 @media (max-width: 991px){
 	.manage_content{
 		width: 100%;
+	}
+
+	.manage_content h2{
+		text-align: center;
 	}
 }
 @media (max-width: 520px){
 	.manage{
 		padding: 120px 0;
-	}
-	.manage_title .typewriter_span{
-		display: table;
 	}
 }
