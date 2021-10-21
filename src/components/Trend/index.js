@@ -1,11 +1,5 @@
 import './Trend.css'
 
-import xrpImg1 from 'assets/img/slide-1.svg'
-import xrpImg2 from 'assets/img/slide-2.svg'
-import xrpImg3 from 'assets/img/slide-3.svg'
-import xrpImg4 from 'assets/img/slide-4.svg'
-import xrpImg5 from 'assets/img/slide-5.svg'
-import xrpImg6 from 'assets/img/slide-6.svg'
 import xrpGraph1 from 'assets/img/graph-1.png'
 import xrpGraph2 from 'assets/img/graph-2.png'
 import xrpGraph3 from 'assets/img/graph-1.png'
@@ -13,28 +7,8 @@ import xrpGraph4 from 'assets/img/graph-2.png'
 import xrpGraph5 from 'assets/img/graph-1.png'
 import xrpGraph6 from 'assets/img/graph-2.png'
 
-
-const getImgByCurrencyName = (name) => {
-    switch (name) {
-        case 'Neo': {
-            return xrpImg1;
-        }
-        case 'Bitcoin': {
-            return xrpImg2;
-        }
-        case 'Ether': {
-            return xrpImg3;
-        }
-        case 'Litecoin': {
-            return xrpImg4;
-        }
-        case 'XRP': {
-            return xrpImg5;
-        }
-        case 'Monero': {
-            return xrpImg6;
-        }
-    }
+const getImg = (img) => {
+    return require(`assets/img/${img}`).default
 }
 
 const getGraphByCurrencyName = (graph) => {
@@ -60,11 +34,11 @@ const getGraphByCurrencyName = (graph) => {
     }
 }
 
-function Trend({ coinName, date, price, precent, volume }) {
+function Trend({ coinName, icon, date, price, precent, volume }) {
     return (
         <div className="item">
             <div className="item_top">
-                <img src={getImgByCurrencyName(coinName)} alt="coin" />
+                <img src={getImg(icon)} alt="coin" />
                 <div className="item_top_inner">
                     <span>{coinName}</span>
                     <p>{date}</p>

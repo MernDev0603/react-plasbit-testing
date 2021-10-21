@@ -53,7 +53,7 @@ function Store() {
                                 Secure storage - Your keys are protected with Secure Enclave and biometric authentication technology.
                             </li>
                         </p>
-                        <a href="#" className="btn">Learn more</a>
+                        <a href="/" className="btn">Learn more</a>
                     </div>
                 </div>
             </div>

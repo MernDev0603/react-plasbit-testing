@@ -51,17 +51,17 @@ function Footer() {
         <footer className="footer">
             <div className="container">
                 <div className="footer_top">
-                    <a href="#">
+                    <a href="/">
                         <img src={logo} alt="logo" />
                     </a>
                     <div className="footer_social">
-                        <a href="#">
+                        <a href="/">
                             <img src={social_1} alt="telegram" />
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={social_2} alt="linkedin" />
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <img src={social_3} alt="twitter" />
                         </a>
                     </div>
@@ -76,7 +76,7 @@ function Footer() {
                                 <ul>
                                     {menu.subMenus.map((subMenu, index) => (
                                         <li key={index}>
-                                            <a href="#">
+                                            <a href="/">
                                                 {subMenu.title}
                                             </a>
                                         </li>
@@ -92,9 +92,9 @@ function Footer() {
                 <div className="policy">
                     PlasBit Payments Europe AG is authorised by the Financial Market Authority of Liechtenstein under the Electronic Money Act 2011, Firm Reference 252199, for the issuing of electronic money.
                     <br />
-                    Terms & Conditions ( <a href="#">EU</a> | <a href="#">Non-EU</a> ) | Privacy Policy ( <a href="#">EU</a> | <a href="#">Non-EU</a> )
+                    Terms & Conditions ( <a href="/">EU</a> | <a href="/">Non-EU</a> ) | Privacy Policy ( <a href="/">EU</a> | <a href="/">Non-EU</a> )
                     <br />
-                    © Copyright 2020 PlasBit - All Rights Reserved. Designed by <a href="#">Webcapitan TEAM</a>
+                    @copyright 2020 -2022 Plasbit LTD - All Rights Reserved.
                 </div>
             </div>
         </footer>

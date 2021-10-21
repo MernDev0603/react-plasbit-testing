@@ -28,7 +28,7 @@ function Shop() {
                                 Turn your crypto into dollars fast for spending with the Plastic Card.
                             </li>
                         </p>
-                        <a href="#" className="btn">Learn more</a>
+                        <a href="/" className="btn">Learn more</a>
                     </div>
                 </div>
             </div>

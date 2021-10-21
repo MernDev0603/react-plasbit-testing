@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import { Chevron } from "./Chevron";
 
-import "./Accordion.css";
 
 export const Accordion = (props) => {
     const [setActive, setActiveState] = useState("");
@@ -21,30 +19,19 @@ export const Accordion = (props) => {
         );
     }
 
-    function getIcon(icon) {
-        return require('assets/img/' + icon).default
-    }
-
     return (
-        <div className="accordion__section">
+        <div className="accordion_container">
             <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-                <p className="accordion__title">{props.menu.title}</p>
-                <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
+                <p className="accordion_title">{props.faq.title}</p>
+                <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />
             </button>
             <div
                 ref={content}
                 style={{ maxHeight: `${setHeight}` }}
-                className="accordion__content"
+                className="accordion_content text_white"
             >
                 <div className="accordion__text">
-                    {props.menu.subMenus.map((subMenu, index) => (
-                        <li key={index}>
-                            <Link to={subMenu.link}>
-                                <img src={getIcon(subMenu.icon)} alt="icon" />
-                                <span>{subMenu.title}</span>
-                            </Link>
-                        </li>
-                    ))}
+                    <div>{props.faq.content}</div>
                 </div>
             </div>
         </div>

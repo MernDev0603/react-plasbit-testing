@@ -50,3 +50,7 @@ export const useResize = () => {
 
     return screenSize;
 }
+
+export const isMobile1 = () => {
+    return window.innerWidth < 768
+}

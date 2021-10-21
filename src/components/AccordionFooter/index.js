@@ -3,7 +3,6 @@ import './AccordionFooter.css'
 
 export const AccordionFooter = (props) => {
     const [isActive, setIsActive] = useState(false);
-    console.log(props)
     return (
         <div className="accordion-footer">
             <div className="accordion-item">

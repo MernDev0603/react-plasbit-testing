@@ -1,5 +1,5 @@
 import './Main.css'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect'
 import { useResize } from '../../hook/useCustomHook'
 
@@ -16,17 +16,17 @@ function Main() {
     const [offsetY, setoffsetY] = useState()
     const { isMobile } = useResize()
     const handleScroll = () => setoffsetY(window.pageYOffset)
-    window.addEventListener('scroll', handleScroll)
+    // window.addEventListener('scroll', handleScroll)
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll)
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // })
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    })
 
     return (
         <section className="main">
-            <img className="main_left" src={main_left} />
-            <img className="main_right" src={main_right} />
+            <img className="main_left" src={main_left} alt="" />
+            <img className="main_right" src={main_right} alt="" />
             <div className="container">
                 <div className="main_inner">
                     <div className="main_content">
@@ -76,8 +76,8 @@ function Main() {
                             Order your card now to get started.
                         </p>
                         <div className="main_btns">
-                            <a href="#" className="btn active main_btns_btn">Order card now</a>
-                            <a href="#" className="btn main_btns_btn">Learn more</a>
+                            <a href="/" className="btn active main_btns_btn">Order card now</a>
+                            <a href="/" className="btn main_btns_btn">Learn more</a>
                         </div>
                     </div>
                     <div className="main_img">

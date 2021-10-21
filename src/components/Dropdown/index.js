@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { Link } from 'react-router-dom';
+
 import "./dropdown.css";
 import { useDetectOutsideClick } from "../../hook/useCustomHook";
 
@@ -13,7 +15,7 @@ function Dropdown(props) {
         <div>
             <div className="menu-container">
                 <li onClick={() => setIsActive(!isActive)} className="menu-trigger">
-                    <a>{props.menu.title}</a>
+                    <a href="#">{props.menu.title}</a>
                 </li>
                 <nav
                     ref={dropdownRef}
@@ -22,10 +24,10 @@ function Dropdown(props) {
                     <ul>
                         {props.menu.subMenus.map((subMenu, index) => (
                             <li key={index}>
-                                <a href="#">
-                                    <img src={getIcon(subMenu.icon)} />
+                                <Link to={subMenu.link}>
+                                    <img src={getIcon(subMenu.icon)} alt="" />
                                     <span>{subMenu.title}</span>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
