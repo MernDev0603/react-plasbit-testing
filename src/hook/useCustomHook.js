@@ -54,3 +54,7 @@ export const useResize = () => {
 export const isMobile1 = () => {
     return window.innerWidth < 768
 }
+
+export const getImg = (img) => {
+    return require(`assets/img/${img}`).default
+}

@@ -3,11 +3,11 @@ import "slick-carousel/slick/slick.css";
 
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { CardFirst } from '../components/Card/CardFirst';
-import { CardSecond } from '../components/Card/CardSecond';
-import { CardThird } from '../components/Card/CardThird';
-import { CardFourth } from '../components/Card/CardFourth';
-import { CardFifth } from '../components/Card/CardFifth';
+import { CardFirst } from '../components/card/CardFirst';
+import { CardSecond } from '../components/card/CardSecond';
+import { CardThird } from '../components/card/CardThird';
+import { CardFourth } from '../components/card/CardFourth';
+import { CardHelp } from '../components/card/CardHelp';
 import { Cookies } from '../components/Cookies';
 
 export const Card = () => {
@@ -22,7 +22,7 @@ export const Card = () => {
                 <CardSecond />
                 <CardThird />
                 <CardFourth />
-                <CardFifth />
+                <CardHelp />
             </main>
             <Footer />
             <Cookies />

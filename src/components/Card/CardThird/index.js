@@ -24,10 +24,8 @@ export const CardThird = () => {
         <section>
             <div className="card_third">
                 <div className="title text_center">
-                    <div className="text_blue"> Choose the card</div>
-                    <div>
-                        aligned to your lifestyle
-                    </div>
+                    <span> Choose the card</span>
+                    <div> aligned to your lifestyle </div>
                 </div>
                 <div className="btn_toggle">
                     <div className={`button text_center ${isLimit === "limit" ? "active" : ""}`} onClick={() => setIsLimit('limit')}>LIMIT</div>
@@ -53,21 +51,21 @@ export const CardThird = () => {
                 <div className="step_container">
                     <div className="step">
                         <img src={getImg('step-1.png')} alt="" />
-                        <p>Create an Account</p>
+                        <p className="text">Create an Account</p>
                     </div>
                     <div className="dot">
                         <img src={getImg('dot.png')} alt="" />
                     </div>
                     <div className="step">
                         <img src={getImg('step-2.png')} alt="" />
-                        <p>Load the Wallet</p>
+                        <p className="text">Load the Wallet</p>
                     </div>
                     <div className="dot">
                         <img src={getImg('dot.png')} alt="" />
                     </div>
                     <div className="step">
                         <img src={getImg('step-3.png')} alt="" />
-                        <p>Order the Card</p>
+                        <p className="text">Order the Card</p>
                     </div>
                 </div>
             </div>

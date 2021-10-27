@@ -117,7 +117,6 @@
     font-family: "Proxima Nova";
     font-size: 18px;
     line-height: 48px;
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -221,7 +220,7 @@
 
     .header .nav ul li a,
     .header .nav_active ul li a {
-        color: #082848;
+        color: #082848 !important;
         line-height: 24px;
     }
 

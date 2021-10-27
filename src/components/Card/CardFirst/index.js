@@ -52,9 +52,9 @@ export const CardFirst = () => {
 
     return (
         <section className="card_first text_center" style={{ backgroundImage: `url(${bgImg})` }}>
-            <div className="title text_white card_title">
-                <p>Everything you {isMobile ? 'need' : 'ever wanted'} <br />
-                    is just a plastic {isMobile && <br />} swipe away</p>
+            <div className="text_white main_title">
+                Everything you {isMobile ? 'need' : 'ever wanted'} <br />
+                is just a plastic {isMobile && <br />} swipe away
             </div>
             <div className="card_btns text_center mobile_none">
                 <a href="#temp" className="btn active">Learn about PlasBit Cards</a>

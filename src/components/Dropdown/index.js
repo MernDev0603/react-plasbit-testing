@@ -15,7 +15,7 @@ function Dropdown(props) {
         <div>
             <div className="menu-container">
                 <li onClick={() => setIsActive(!isActive)} className="menu-trigger">
-                    <a href="#">{props.menu.title}</a>
+                    <a href="#" style={{ color: props.color }}>{props.menu.title}</a>
                 </li>
                 <nav
                     ref={dropdownRef}

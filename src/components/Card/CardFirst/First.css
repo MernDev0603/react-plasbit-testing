@@ -46,7 +46,7 @@
     transform: scale(-1, -1) rotate(45deg);
 }
 
-.card_first .card_title {
+.card_first .main_title {
     margin-bottom: 60px;
 }
 
@@ -99,12 +99,7 @@
     }
 }
 
-.card_first .card_title p {
-    font-size: 65px;
-    line-height: 85px;
-}
-
-.card_first .card_title div {
+.card_first .main_title div {
     margin-top: 30px;
 }
 
@@ -143,12 +138,7 @@
         padding: 150px 0 250px;
     }
 
-    .card_first .card_title p {
-        font-size: 35px;
-        line-height: 45px;
-    }
-
-    .card_first .card_title {
+    .card_first .main_title {
         margin-bottom: 0;
     }
 
