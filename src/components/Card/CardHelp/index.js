@@ -15,7 +15,7 @@ export const CardHelp = () => {
                         Order your virtual or <br />
                         plastic card right now
                     </div>
-                    <a href="/card" className="btn bg_white text_blue">Order Now</a>
+                    <a href="/signup" className="btn bg_white text_blue">Order Now</a>
                 </div>
                 <img className="mobile_none" src={getImg('hand.png')} alt="" />
             </div>

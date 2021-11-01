@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Card } from './pages/Card';
 import { Wallet } from './pages/Wallet';
 import { ContactUs } from './pages/ContactUs';
+import { Privacy } from './pages/Privacy';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 				<Route exact component={Home} path="/" />
 				<Route exact component={Card} path="/card" />
 				<Route exact component={Wallet} path="/wallet" />
-				<Route exact component={ContactUs} path="/contactus" />
+				<Route exact component={ContactUs} path="/contact" />
+				<Route component={Privacy} path="/privacy" />
 			</Switch>
 		</Router>
 	);

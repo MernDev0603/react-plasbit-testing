@@ -2,7 +2,6 @@ import { useResize } from 'hook/useCustomHook'
 
 import logo from 'assets/img/logo-footer.svg'
 import social_1 from 'assets/img/social-1.svg'
-import social_2 from 'assets/img/social-2.svg'
 import social_3 from 'assets/img/social-3.svg'
 import { AccordionFooter } from 'components/AccordionFooter'
 import './Footer.css'
@@ -11,35 +10,35 @@ const menus = [
     {
         'title': 'Service',
         'subMenus': [
-            { 'title': 'Card', 'icon': 'card.svg' },
-            { 'title': 'Wallet', 'icon': 'wallet.svg' },
-            { 'title': 'Calculator', 'icon': 'calculator.svg' }
+            { 'title': 'Card', 'icon': 'card.svg', 'link': '/card' },
+            { 'title': 'Wallet', 'icon': 'wallet.svg', 'link': '/wallet' },
+            { 'title': 'Calculator', 'icon': 'calculator.svg', 'link': '/card' }
         ]
     },
     {
         'title': 'Company',
         'subMenus': [
-            { 'title': 'About', 'icon': 'about.svg' },
-            { 'title': 'Careers', 'icon': 'careers.svg' },
-            { 'title': 'Privacy', 'icon': 'privacy.svg' },
-            { 'title': 'Cardholder Agreement', 'icon': 'cardholder_agreement.svg' },
-            { 'title': 'Legal', 'icon': 'legal.svg' },
-            { 'title': 'Contact Us', 'icon': 'contact_us.svg' },
+            { 'title': 'About', 'icon': 'about.svg', 'link': '/about' },
+            { 'title': 'Careers', 'icon': 'careers.svg', 'link': '/careers' },
+            { 'title': 'Privacy', 'icon': 'privacy.svg', 'link': '/privacy/notice' },
+            { 'title': 'Cardholder Agreement', 'icon': 'cardholder_agreement.svg', 'link': '/card' },
+            { 'title': 'Legal', 'icon': 'legal.svg', 'link': '/legal' },
+            { 'title': 'Contact Us', 'icon': 'contact_us.svg', 'link': '/contact' },
         ]
     },
     {
         'title': 'Security',
         'subMenus': [
-            { 'title': 'Our Security', 'icon': 'about.svg' },
-            { 'title': 'Certifications & Assessments', 'icon': 'careers.svg' }
+            { 'title': 'Our Security', 'icon': 'about.svg', 'link': '/' },
+            { 'title': 'Certifications & Assessments', 'icon': 'careers.svg', 'link': '/' }
         ]
     },
     {
         'title': 'Starter guide',
         'subMenus': [
-            { 'title': 'Cryptocurrency Basics', 'icon': 'about.svg' },
-            { 'title': 'Advanced Cryptocurrency', 'icon': 'careers.svg' },
-            { 'title': 'FAQ', 'icon': 'privacy.svg' }
+            { 'title': 'Cryptocurrency Basics', 'icon': 'about.svg', 'link': '/' },
+            { 'title': 'Advanced Cryptocurrency', 'icon': 'careers.svg', 'link': '/' },
+            { 'title': 'FAQ', 'icon': 'privacy.svg', 'link': '/' }
         ]
     }
 ]
@@ -59,9 +58,6 @@ function Footer() {
                             <img src={social_1} alt="telegram" />
                         </a>
                         <a href="/">
-                            <img src={social_2} alt="linkedin" />
-                        </a>
-                        <a href="/">
                             <img src={social_3} alt="twitter" />
                         </a>
                     </div>
@@ -76,7 +72,7 @@ function Footer() {
                                 <ul>
                                     {menu.subMenus.map((subMenu, index) => (
                                         <li key={index}>
-                                            <a href="/">
+                                            <a href={subMenu.link}>
                                                 {subMenu.title}
                                             </a>
                                         </li>

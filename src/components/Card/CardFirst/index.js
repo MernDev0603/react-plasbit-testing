@@ -57,8 +57,8 @@ export const CardFirst = () => {
                 is just a plastic {isMobile && <br />} swipe away
             </div>
             <div className="card_btns text_center mobile_none">
-                <a href="#temp" className="btn active">Learn about PlasBit Cards</a>
-                <a href="/card" className="btn bg_white">Compare Card Tiers </a>
+                <a href="#second" className="btn active">Learn about PlasBit Cards</a>
+                <a href="#third" className="btn bg_white">Compare Card Tiers </a>
             </div>
             {isMobile && <Slider clickHandler={clickHandler} />}
             <div className="text text_white composite">
@@ -79,7 +79,7 @@ export const CardFirst = () => {
             </div>
             {!isMobile && <Slider clickHandler={clickHandler} />}
             <div className="card_btns text_center order_card">
-                <a href="/card" className="btn bg_white">Order Card </a>
+                <a href="/signup" className="btn bg_white">Order Card </a>
             </div>
         </section>
     )

@@ -21,10 +21,10 @@ export const Accordion = (props) => {
 
     return (
         <div className="accordion_container">
-            <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
+            <div className={`accordion ${setActive}`} onClick={toggleAccordion}>
                 <p className="accordion_title">{props.faq.title}</p>
                 <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />
-            </button>
+            </div>
             <div
                 ref={content}
                 style={{ maxHeight: `${setHeight}` }}

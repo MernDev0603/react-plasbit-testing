@@ -11,7 +11,7 @@ function Help() {
                         Support is just a few taps away. You can also get
                         your question answered by using our help library
                     </p>
-                    <a href="#" className="btn contact_btn">
+                    <a href="/contact" className="btn contact_btn">
                         Contact us
                     </a>
                 </div>

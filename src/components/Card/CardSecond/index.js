@@ -15,7 +15,7 @@ const cards = [
 export const CardSecond = () => {
     return (
         <section className="card_second" style={{ backgroundImage: `url(${bgImg})` }}>
-            <div id="temp" className="box_container">
+            <div id="second" className="box_container">
                 <div className="box_first">
                     <Card card={cards[0]} />
                     <Card card={cards[3]} />

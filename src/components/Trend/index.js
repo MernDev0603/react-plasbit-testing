@@ -51,7 +51,7 @@ function Trend({ coinName, icon, date, price, precent, volume }) {
                 <p className="price">${price}</p>
                 <span>{precent}%</span>
             </div>
-            <button className="btn slider_btn">Buy</button>
+            <a href="/signup" className="btn slider_btn">Buy</a>
             <span className="volume">24h volume: {volume}</span>
         </div>
     );

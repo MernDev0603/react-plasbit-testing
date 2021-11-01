@@ -23,22 +23,6 @@ p {
 	margin-bottom: 0 !important;
 }
 
-.text_center {
-	text-align: center;
-}
-
-.text_white {
-	color: white;
-}
-
-.text_blue {
-	color: #00abff;
-}
-
-.bg_white {
-	background-color: white;
-}
-
 .container-fluid {
 	max-width: 1520px;
 	margin: 0 auto;
@@ -293,6 +277,28 @@ li {
 	font-weight: bold;
 }
 
+.text_center {
+	text-align: center;
+}
+
+.text_white {
+	color: white;
+}
+
+.text_blue {
+	color: #00abff;
+}
+
+.bg_white {
+	background-color: white;
+}
+
+.btn_group {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
 @media (max-width: 1550px) {
 	.container-fluid {
 		margin-right: 40px;
@@ -413,6 +419,18 @@ li {
 
 	.trend_slider .slick-current {
 		opacity: 1;
+	}
+
+	.btn_group {
+		display: block;
+	}
+
+	.btn_group a:first-child {
+		margin: 0 auto 20px;
+	}
+
+	.btn_group .btn_group_btn {
+		margin: 0 auto 20px;
 	}
 }
 

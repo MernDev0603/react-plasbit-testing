@@ -20,12 +20,12 @@ const menus = [
     {
         'title': 'Company',
         'subMenus': [
-            { 'title': 'About', 'icon': 'about.svg', 'link': '/card' },
-            { 'title': 'Careers', 'icon': 'careers.svg', 'link': '/card' },
-            { 'title': 'Privacy', 'icon': 'privacy.svg', 'link': '/card' },
+            { 'title': 'About', 'icon': 'about.svg', 'link': '/about' },
+            { 'title': 'Careers', 'icon': 'careers.svg', 'link': '/careers' },
+            { 'title': 'Privacy', 'icon': 'privacy.svg', 'link': '/privacy/notice' },
             { 'title': 'Cardholder Agreement', 'icon': 'cardholder_agreement.svg', 'link': '/card' },
-            { 'title': 'Legal', 'icon': 'legal.svg', 'link': '/card' },
-            { 'title': 'Contact Us', 'icon': 'contact_us.svg', 'link': '/contactus' },
+            { 'title': 'Legal', 'icon': 'legal.svg', 'link': '/legal' },
+            { 'title': 'Contact Us', 'icon': 'contact_us.svg', 'link': '/contact' },
         ]
     }
 ]
@@ -35,37 +35,31 @@ function Header() {
     const [isActive, setActive] = useState(false);
     const [burger, setburger] = useState(false);
     const [logoImg, setLogoImg] = useState(logo);
-    const [color, setColor] = useState('white');
+    const [color, setColor] = useState('#283957');
     const [menuColor, setMenuColor] = useState('white');
     const [isDark, setIsDark] = useState(true)
     const { isResponsive, isMobile } = useResize();
 
     useEffect(() => {
-        switch (pathName) {
-            case '/card':
-                setLogoImg(logoWhite)
-                setColor('white')
-                setMenuColor('white')
-                setIsDark(false)
-                break;
-            case '/wallet':
-                setLogoImg(logo)
-                setColor('#283957')
-                setMenuColor('#283957')
-                setIsDark(true)
-                break;
-            case '/contactus':
-                setLogoImg(logoWhite)
-                setColor('white')
-                setMenuColor('white')
-                setIsDark(false)
-                break;
-            default:
-                setLogoImg(logo)
-                setColor('#283957')
-                setMenuColor('white')
-                setIsDark(true)
-                break;
+        if (pathName == '/card' || pathName == '/contact') {
+            setLogoImg(logoWhite)
+        } else {
+            setLogoImg(logo)
+        }
+        if (pathName == '/card' || pathName == '/contact') {
+            setColor('white')
+        } else {
+            setColor('#283957')
+        }
+        if (pathName == '/card' || pathName == '/contact' || pathName == '/') {
+            setMenuColor('white')
+        } else {
+            setMenuColor('#283957')
+        }
+        if (pathName == '/card' || pathName == '/contact') {
+            setIsDark(false)
+        } else {
+            setIsDark(true)
         }
     })
 

@@ -75,9 +75,9 @@ function Main() {
                             <br />
                             Order your card now to get started.
                         </p>
-                        <div className="main_btns">
-                            <a href="/" className="btn active main_btns_btn">Order card now</a>
-                            <a href="/" className="btn main_btns_btn">Learn more</a>
+                        <div className="btn_group">
+                            <a href="/signup" className="btn active btn_group_btn">Order card now</a>
+                            <a href="/card" className="btn btn_group_btn">Learn more</a>
                         </div>
                     </div>
                     <div className="main_img">

@@ -139,7 +139,7 @@ export const Card = (props) => {
                     </div>
                     <div className="actions">
                         <button className="btn text_white" onClick={toggleAccordion}>Details</button>
-                        <button className="btn text_white active">Order Now</button>
+                        <a href="signup" className="btn text_white active">Order Now</a>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@ export const CardThird = () => {
     return (
         <section>
             <div className="card_third">
-                <div className="title text_center">
+                <div className="title text_center" id="third">
                     <span> Choose the card</span>
                     <div> aligned to your lifestyle </div>
                 </div>

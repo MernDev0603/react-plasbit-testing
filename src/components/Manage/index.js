@@ -49,7 +49,7 @@ function Manage() {
                                 Secure storage - We store the vast majority of the digital assets in secure offline storage.
                             </li>
                         </p>
-                        <a href="/" className="btn">Learn more</a>
+                        <a href="/wallet" className="btn">Learn more</a>
                     </div>
                 </div>
             </div>
