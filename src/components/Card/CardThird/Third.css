@@ -27,7 +27,7 @@
 
 .card_third .btn_toggle .active {
     background-color: white;
-    color: #00abff;
+    color: var(--lightBlue);
     border-radius: 5px;
     box-shadow: 2px 4px 10px #d3d0d0;
 }

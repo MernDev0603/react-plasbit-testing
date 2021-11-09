@@ -39,7 +39,7 @@ export const ContactSecond = () => {
                             Information</>}
                         {isMobile && <>Contact Information</>}
                     </div>
-                    <div className="content">
+                    <div className="contact_detail">
                         <a href="https://goo.gl/maps/CKvFz86WBDTX2jbt6" target="_blank"><img src={getImg('contact_us/pin.png')} /></a>
                         <a href="https://goo.gl/maps/CKvFz86WBDTX2jbt6" target="_blank" className="text text_white">
                             Exchange House, Second Floor,<br />
@@ -47,25 +47,25 @@ export const ContactSecond = () => {
                             United Kingdom
                         </a>
                     </div>
-                    <div className="content">
+                    <div className="contact_detail">
                         <a href="tel:+44 78 8215 1018"><img src={getImg('contact_us/phone.png')} /></a>
                         <a href="tel:+44 78 8215 1018" className="text text_white">
                             +44 78 8215 1018
                         </a>
                     </div>
-                    <div className="content">
+                    <div className="contact_detail">
                         <a href="mailto: support@plasbit.com"><img src={getImg('contact_us/email.png')} /></a>
                         <a href="mailto: support@plasbit.com" className="text text_white">
                             support@plasbit.com
                         </a>
                     </div>
-                    <div className="content">
+                    <div className="contact_detail">
                         <a href='https://wa.me/+447882151018' target='_blank'><img src={getImg('contact_us/whatsapp.png')} /></a>
                         <a href='https://wa.me/+447882151018' target='_blank' className="text text_white">
                             +44 78 8215 1018
                         </a>
                     </div>
-                    <div className="content">
+                    <div className="contact_detail">
                         <a href="https://telegram.me/plasbit" target='_blank'><img src={getImg('contact_us/telegram.png')} /></a>
                         <a href="https://telegram.me/plasbit" target='_blank' className="text text_white">
                             @plasbit

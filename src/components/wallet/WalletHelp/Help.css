@@ -21,3 +21,14 @@
     z-index: 1;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .wallet_help .help_inner {
+        display: block;
+        text-align: center;
+    }
+
+    .wallet_help .btn_mobile {
+        margin-bottom: 25px;
+    }
+}

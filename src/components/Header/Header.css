@@ -31,8 +31,6 @@
     padding-right: 15px;
     font-size: 18px;
     font-weight: 600;
-    /* color: #283957; */
-    /* color: white; */
     cursor: pointer;
 }
 
@@ -103,21 +101,19 @@
     align-items: center;
 }
 
-/* .header .nav ul,
-.header .nav_active ul {
-    display: flex;
-} */
-
 .header .header_menu li a,
 .header.nav_active .header_menu li a {
     text-shadow: 0 1px 1px rgba(0, 0, 0, .66);
-    text-transform: uppercase;
     display: table;
-    margin-right: 65px;
+    margin-right: 60px;
     font-family: "Proxima Nova";
     font-size: 18px;
     line-height: 48px;
     font-weight: bold;
+}
+
+.header a:hover {
+    color: var(--lightBlue) !important;
 }
 
 .header .btc,
@@ -150,8 +146,6 @@
     background-color: transparent;
     border: 0;
     font-size: 18px;
-    /* color: #283957; */
-    /* color: white; */
     font-weight: bold;
 }
 
@@ -220,7 +214,6 @@
 
     .header .nav ul li a,
     .header .nav_active ul li a {
-        color: #082848 !important;
         line-height: 24px;
     }
 
@@ -237,7 +230,7 @@
 
 @media (max-width: 991px) {
     .header .btc select {
-        color: #082848;
+        color: var(--darkBlue);
         text-shadow: none;
     }
 }
@@ -262,16 +255,4 @@
         width: 100%;
         height: 100%;
     }
-
-    /* .lang_mob,
-	.btc_mob{
-		display: block;
-	}
-	.btc_mob{
-		margin: 15px 0;
-		select{
-			font-size: 16px;
-		}
-		
-	} */
 }

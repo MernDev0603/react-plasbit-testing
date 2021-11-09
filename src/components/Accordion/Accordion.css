@@ -26,7 +26,7 @@
 
 /* Style the accordion content title */
 .accordion__section .accordion__title {
-    color: #082848;
+    color: var(--darkBlue);
     line-height: 24px;
     font-size: 18px;
     text-shadow: 0 1px 1px rgb(0 0 0 / 66%);

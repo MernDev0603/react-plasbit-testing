@@ -1,3 +1,9 @@
+:root {
+	--darkBlue: #082848;
+	--lightBlue: #00abff;
+	--textBlue: #283957;
+}
+
 html,
 body {
 	font-family: "Proxima Nova" !important;
@@ -99,7 +105,7 @@ li {
 	font-weight: bold;
 	border-radius: 8px;
 	border: 1px solid #1783e7;
-	color: #283957;
+	color: var(--textBlue);
 	text-align: center;
 	min-width: 250px;
 	text-transform: capitalize;
@@ -114,7 +120,7 @@ li {
 }
 
 .btn.active {
-	background-image: linear-gradient(90deg, #1783e7 0%, #00abff 100%);
+	background-image: linear-gradient(90deg, #1783e7 0%, var(--lightBlue) 100%);
 	color: #ffffff;
 }
 
@@ -127,7 +133,7 @@ li {
 .main_title {
 	font-size: 65px;
 	line-height: 70px;
-	color: #082848;
+	color: var(--darkBlue);
 	font-weight: 800;
 	filter: drop-shadow(0px 23px 13.5px rgba(40, 57, 87, 0.2));
 	margin-bottom: 40px;
@@ -135,13 +141,13 @@ li {
 }
 
 .main_title span {
-	color: #00abff;
+	color: var(--lightBlue);
 }
 
 .text {
 	font-size: 20px;
 	line-height: 36px;
-	color: #283957;
+	color: var(--textBlue);
 	font-weight: bold;
 }
 
@@ -163,14 +169,14 @@ li {
 .title {
 	font-size: 50px;
 	line-height: 55px;
-	color: #082848;
+	color: var(--darkBlue);
 	font-weight: 800;
 	filter: drop-shadow(0px 23px 13.5px rgba(40, 57, 87, 0.2));
 	margin-bottom: 45px;
 }
 
 .title span {
-	color: #00abff;
+	color: var(--lightBlue);
 }
 
 .title.white {
@@ -286,7 +292,7 @@ li {
 }
 
 .text_blue {
-	color: #00abff;
+	color: var(--lightBlue);
 }
 
 .bg_white {
@@ -321,12 +327,12 @@ li {
 	}
 
 	.nav_toggle-item.dark {
-		background-color: #082848;
+		background-color: var(--darkBlue);
 	}
 
 	.nav_toggle-item.dark:before,
 	.nav_toggle-item.dark:after {
-		background-color: #082848;
+		background-color: var(--darkBlue);
 	}
 }
 
@@ -389,6 +395,10 @@ li {
 		line-height: 45px;
 		min-height: 90px;
 	}
+
+	.help_title {
+        font-size: 28px;
+    }
 
 	.title {
 		font-size: 28px;

@@ -10,11 +10,11 @@ import { Accordion } from 'components/Accordion'
 import './Header.css'
 const menus = [
     {
-        'title': 'Service',
+        'title': 'Products',
         'subMenus': [
             { 'title': 'Card', 'icon': 'card.svg', 'link': '/card' },
             { 'title': 'Wallet', 'icon': 'wallet.svg', 'link': '/wallet' },
-            { 'title': 'Calculator', 'icon': 'calculator.svg', 'link': '/card' }
+            { 'title': 'Calculator', 'icon': 'calculator.svg', 'link': '/calculator' }
         ]
     },
     {
@@ -35,28 +35,28 @@ function Header() {
     const [isActive, setActive] = useState(false);
     const [burger, setburger] = useState(false);
     const [logoImg, setLogoImg] = useState(logo);
-    const [color, setColor] = useState('#283957');
+    const [color, setColor] = useState('var(--darkBlue)');
     const [menuColor, setMenuColor] = useState('white');
     const [isDark, setIsDark] = useState(true)
     const { isResponsive, isMobile } = useResize();
 
     useEffect(() => {
-        if (pathName == '/card' || pathName == '/contact') {
+        if (pathName == '/card' || pathName == '/contact' || pathName == '/calculator') {
             setLogoImg(logoWhite)
         } else {
             setLogoImg(logo)
         }
-        if (pathName == '/card' || pathName == '/contact') {
+        if (pathName == '/card' || pathName == '/contact' || pathName == '/calculator') {
             setColor('white')
         } else {
-            setColor('#283957')
+            setColor('var(--darkBlue)')
         }
-        if (pathName == '/card' || pathName == '/contact' || pathName == '/') {
+        if (pathName == '/card' || pathName == '/contact' || pathName == '/' || pathName == '/calculator') {
             setMenuColor('white')
         } else {
-            setMenuColor('#283957')
+            setMenuColor('var(--darkBlue)')
         }
-        if (pathName == '/card' || pathName == '/contact') {
+        if (pathName == '/card' || pathName == '/contact' || pathName == '/calculator') {
             setIsDark(false)
         } else {
             setIsDark(true)

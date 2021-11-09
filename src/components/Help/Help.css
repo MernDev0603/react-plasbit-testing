@@ -27,7 +27,8 @@
 
 @media (max-width: 991px) {
     .home_help .help_inner {
-        flex-wrap: wrap;
+        display: block;
+        text-align: center;
     }
 
     .home_help .help_inner .help_text {

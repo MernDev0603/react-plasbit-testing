@@ -14,11 +14,11 @@
 }
 
 .privacy a:hover {
-    color: #283957;
+    color: var(--textBlue);
 }
 
 .privacy .tab.active {
-    border-bottom: 1px solid #00abff;
+    border-bottom: 1px solid var(--lightBlue);
 }
 
 .privacy .tab_content {
@@ -63,6 +63,7 @@
 
 .privacy .content {
     padding: 30px;
+    margin-top: 0px;
 }
 
 .privacy .content_title {

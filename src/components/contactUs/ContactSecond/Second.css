@@ -30,7 +30,7 @@
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 36px;
-    color: #283957;
+    color: var(--textBlue);
     font-weight: bold;
     padding-left: 20px;
     border: none;
@@ -45,7 +45,7 @@
 
 .contact_second input:focus,
 .contact_second textarea:focus {
-    outline-color: #00abff;
+    outline-color: var(--lightBlue);
 }
 
 .contact_second .right_side {
@@ -55,17 +55,21 @@
     box-shadow: 0 0 5px lightgrey;
 }
 
-.contact_second .content {
+.contact_second .contact_detail {
     height: 90px;
     display: flex;
     align-items: center
 }
 
-.contact_second .content a:hover {
+.contact_second .contact_detail a:first-child {
+    width: 61px;
+}
+
+.contact_second .contact_detail a:hover {
     color: white;
 }
 
-.contact_second .content .text {
+.contact_second .contact_detail .text {
     margin-left: 20px;
     line-height: 25px;
 }

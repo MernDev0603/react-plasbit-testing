@@ -8,7 +8,7 @@ import './Footer.css'
 
 const menus = [
     {
-        'title': 'Service',
+        'title': 'Products',
         'subMenus': [
             { 'title': 'Card', 'icon': 'card.svg', 'link': '/card' },
             { 'title': 'Wallet', 'icon': 'wallet.svg', 'link': '/wallet' },
@@ -54,10 +54,10 @@ function Footer() {
                         <img src={logo} alt="logo" />
                     </a>
                     <div className="footer_social">
-                        <a href="/">
+                        <a href="https://telegram.me/plasbit" target="_blank">
                             <img src={social_1} alt="telegram" />
                         </a>
-                        <a href="/">
+                        <a href="https://twitter.com/plasbit" target="_blank">
                             <img src={social_3} alt="twitter" />
                         </a>
                     </div>

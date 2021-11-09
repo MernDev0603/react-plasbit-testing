@@ -56,7 +56,7 @@
   perspective: 1000px;
 }
 
-.card {
+.card_first .card {
   --card-translateY-offset: 0;
   position: absolute;
   left: 50%;
@@ -76,7 +76,7 @@
   user-select: none;
 }
 
-.card::before {
+.card_first .card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -129,7 +129,7 @@
   --opacity: 0.4;
 }
 
-.infoList {
+.card_first .infoList {
   position: absolute;
   width: 80%;
   height: var(--card-height);
@@ -154,7 +154,7 @@
   perspective: 1000px;
 }
 
-.info {
+.card_first .info {
   margin-bottom: calc(var(--card-height) / 8);
   -webkit-transition: -webkit-transform var(--card-transition-duration) var(--card-transition-easing);
   transition: -webkit-transform var(--card-transition-duration) var(--card-transition-easing);
@@ -162,9 +162,8 @@
   transition: transform var(--card-transition-duration) var(--card-transition-easing), -webkit-transform var(--card-transition-duration) var(--card-transition-easing);
 }
 
-.info .text {
+.card_first .info .text {
   position: relative;
-  font-family: "Montserrat";
   font-size: calc(var(--card-width) * var(--text-size-offset, 0.16));
   white-space: nowrap;
   color: #fff;
@@ -173,21 +172,21 @@
   width: fit-content;
 }
 
-.info .name,
-.info .location {
+.card_first .info .name,
+.card_first .info .location {
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.info .location {
+.card_first .info .location {
   --mg-left: 40px;
   margin-left: var(--mg-left);
   margin-bottom: calc(var(--mg-left) / 2);
   padding-bottom: 0.5rem;
 }
 
-.info .location::before,
-.info .location::after {
+.card_first .info .location::before,
+.card_first .info .location::after {
   content: "";
   position: absolute;
   background: #fff;
@@ -196,19 +195,19 @@
   transform: translate(calc(-1 * var(--mg-left)), -50%);
 }
 
-.info .location::before {
+.card_first .info .location::before {
   top: 50%;
   width: 20px;
   height: 5px;
 }
 
-.info .location::after {
+.card_first .info .location::after {
   bottom: 0;
   width: 60px;
   height: 2px;
 }
 
-.info .description {
+.card_first .info .description {
   --text-size-offset: 0.065;
   font-weight: 500;
 }
@@ -249,7 +248,6 @@
 
 .loading__wrapper .loader--text {
   color: #fff;
-  font-family: "Montserrat";
   font-weight: 500;
   margin-bottom: 1.4rem;
 }
