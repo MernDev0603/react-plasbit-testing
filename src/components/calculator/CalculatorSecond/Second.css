@@ -1,6 +1,7 @@
 .calculator_second {
     width: 90%;
-    margin: -150px auto 100px;
+    max-width: 1800px;
+    margin: 150px auto 100px;
 }
 
 .calculator_second .sub_title {
@@ -64,7 +65,7 @@
 
 @media (max-width: 768px) {
     .calculator_second {
-        margin: 30px auto;
+        margin: 230px auto;
     }
 
     .calculator_second .sub_title {

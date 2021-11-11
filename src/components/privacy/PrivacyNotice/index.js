@@ -1,14 +1,18 @@
 
 import { StickyContainer, Sticky } from "react-sticky";
 
+import { useResize } from 'hook/useCustomHook';
+
 export const PrivacyNotice = () => {
+
+    const { isMobile } = useResize();
 
     return (
         <div className="tab_content active">
             <div className="text tab_title">PRIVACY NOTICE</div>
             <div className="tab_text">Updated Oct 28 2021</div>
             <div className="index_content">
-                <StickyContainer>
+                {!isMobile && <StickyContainer>
                     <div className="index">
                         <Sticky>
                             {({ style }) => (
@@ -19,7 +23,13 @@ export const PrivacyNotice = () => {
                             )}
                         </Sticky>
                     </div>
-                </StickyContainer>
+                </StickyContainer>}
+                {isMobile && <div className="index">
+                    <div>
+                        <a href="#scope" className="text link">Scope and consent</a>
+                        <a href="#collect" className="text link">What kind of information do we collect?</a>
+                    </div>
+                </div>}
                 <div className="content">
                     <div id="scope">
                         <div className="text content_title">Scope and consent</div>

@@ -1,7 +1,7 @@
 
-import React, {useRef, useEffect, useState} from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import axios from "axios";
-
+import SelectCurrency from 'react-select-currency'
 import './First.css'
 import { getImg, useResize } from '../../../hook/useCustomHook'
 
@@ -25,11 +25,13 @@ const setInputFilter = (textbox, inputFilter) => {
 
 export const CalculatorFirst = () => {
 
+    const img = useRef(null);
     const { isMobile } = useResize();
     const inputBtc = useRef(null);
+    const input = useRef(null);
     const [btcPrice, setBtcPrice] = useState(0);
     const [timePrice, setTimePrice] = useState(0);
-    const [currency, setCurrency] = useState('usd');
+    const [currency, setCurrency] = useState('eur');
     const baseURL = `https://api.coingecko.com/api/v3/coins/bitcoin`;
 
     useEffect(() => {
@@ -39,72 +41,80 @@ export const CalculatorFirst = () => {
     })
 
     useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            setTimePrice(response.data.market_data);
-        });
+        // axios.get(baseURL).then((response) => {
+        //     setTimePrice(response.data.market_data);
+        // });
         handleBtcAmount();
+
+        img.current.style.marginLeft = `-${window.innerWidth / 2 + (window.innerWidth < 1650 ? 230 : 10)}px`;
+
+        document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
+        document.querySelector('.react-autosuggest__input').placeholder = "Search for your currency"
+        document.querySelector('.react-autosuggest__input').style.width = document.querySelector('div.currency').clientWidth + "px";
     });
 
-    const handleCurrency = (e) => {
-        setCurrency(e.target.value);
+    const handleCurrency = () => {
+        document.querySelector('.react-autosuggest__container input').style.visibility = "visible"
+        document.querySelector('.react-autosuggest__container input').value = ""
+        document.querySelector('.react-autosuggest__container input').focus();
+        document.querySelector('.react-autosuggest__container input').addEventListener('blur', function () {
+            this.style.visibility = "hidden"
+        })
     }
 
     const handleBtcAmount = () => {
         const amount = inputBtc.current.value;
-        console.log('currency_variable', currency);
-        console.log('currency', timePrice?.current_price?.currency)
-        console.log('usd', timePrice?.current_price?.ngn)
         setBtcPrice(parseFloat(amount * timePrice?.current_price?.currency).toFixed(2));
     }
 
+    const onSelectedCurrency = e => {
+        console.log(e.target.value)
+        document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
+    }
+
     return (
-        <section className="calculator_first" style={{ backgroundImage: `url(${getImg('calculator/first_bg.png')})` }}>
+        <section className="calculator_first container">
+            <img src={getImg('calculator/first_bg.png')} ref={img} />
             <div className="calculator_container">
                 <div className="main_title text_white">
                     Bitcoin <span>Calculator</span>
                 </div>
                 <div className="text text_white">
-                    Use PlasBit's Bitcoin calculator to find out exactly how much your Bitcoin is worth in any of the {!isMobile && <br/>}
+                    Use PlasBit's Bitcoin calculator to find out exactly how much your Bitcoin is worth in any of the {!isMobile && <br />}
                     supported global currencies, using accurate, up-to-date exchange rates. Get real-time and {!isMobile && <br />}
                     historical trends in the BTC value for your selected currency.
                 </div>
-               <div className="card">
-                   <div className="bitcoin">
+                <div className="card">
+                    <div className="bitcoin">
                         <div className="text label text_blue">
                             Amount in bitcoin
                         </div>
                         <div className="input">
-                            <input type="text" defaultValue="1" ref={inputBtc} onChange={handleBtcAmount}/>
+                            <input type="text" defaultValue="1" ref={inputBtc} onChange={handleBtcAmount} />
                             <div className="text suffix">BTC</div>
                             {isMobile && <div className="text_white">=</div>}
                         </div>
-                   </div>
-                   {!isMobile && <div className="text_white">=</div> }
-                   <div className="currency">
+                    </div>
+                    {!isMobile && <div className="text_white">=</div>}
+                    <div className="currency">
                         <div className="text label text_blue">
                             Amount in selected currency
                         </div>
                         <div className="input">
-                            <input type="text" value={btcPrice} disabled/>
-                            <select className="text suffix" onChange={handleCurrency}>
-                                <option value="usd">USD</option>
-                                <option value="eur">EUR</option>
-                                <option value="gbp">GBP</option>
-                                <option value="ngn">NGN</option>
-                                <option value="cny">CNY</option>
-                                <option value="jpy">JPY</option>
-                            </select>
+                            <input type="text" value={btcPrice} disabled />
+                            <p className="text suffix" onClick={handleCurrency}><span>USD</span></p>
                         </div>
+                        <SelectCurrency onChange={onSelectedCurrency} />
                         <div className="text bottom">
-                            <span className={ (currency == "usd") ? "active" : ""}>USD</span>
-                            <span className={ (currency == "eur") ? "active" : ""}>EUR</span>
-                            <span className={ (currency == "gbp") ? "active" : ""}>GBP</span>
-                            <span className={ (currency == "ngn") ? "active" : ""}>NGN</span>
-                            <span className={ (currency == "cny") ? "active" : ""}>CNY</span>
-                            <span className={ (currency == "jpy") ? "active" : ""}>JPY</span>
+                            <span className={(currency == "usd") ? "active" : ""}>USD</span>
+                            <span className={(currency == "eur") ? "active" : ""}>EUR</span>
+                            <span className={(currency == "gbp") ? "active" : ""}>GBP</span>
+                            <span className={(currency == "ngn") ? "active" : ""}>NGN</span>
+                            <span className={(currency == "cny") ? "active" : ""}>CNY</span>
+                            <span className={(currency == "jpy") ? "active" : ""}>JPY</span>
                         </div>
-                   </div>
-               </div>
+                    </div>
+                </div>
             </div>
         </section>
     )

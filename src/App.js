@@ -7,6 +7,7 @@ import { Wallet } from './pages/Wallet';
 import { ContactUs } from './pages/ContactUs';
 import { Privacy } from './pages/Privacy';
 import { Calculator } from './pages/Calculator';
+import { Legal } from './pages/Legal';
 import 'antd/dist/antd.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 				<Route exact component={ContactUs} path="/contact" />
 				<Route component={Privacy} path="/privacy" />
 				<Route exact component={Calculator} path="/calculator" />
+				<Route component={Legal} path="/legal" />
 			</Switch>
 		</Router>
 	);

@@ -34,7 +34,7 @@
     font-weight: bold;
     padding-left: 20px;
     border: none;
-    background-color: #eaebee;
+    background-color: var(--lightGrey);
 }
 
 .contact_second textarea {

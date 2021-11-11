@@ -60,7 +60,7 @@ export const CalculatorSecond = () => {
 
         // return formatConfig.format(price);
 
-        return price +"USD";
+        return price + "USD";
     };
 
     const formatPlusMinus = (priceChange) => {
@@ -75,16 +75,16 @@ export const CalculatorSecond = () => {
     };
 
     return (
-        <section className="calculator_second">
-           <div className="title text_center">
-               Current <span>Bitcoin Price</span> {isMobile && <br/>} in USD <span className="text">(US Dollar)</span>
-           </div>
-           <div className="sub_title">
+        <section className="calculator_second container">
+            <div className="title text_center">
+                Current <span>Bitcoin Price</span> {isMobile && <br />} in USD <span className="text">(US Dollar)</span>
+            </div>
+            <div className="sub_title">
                 <span className="text">{formatPrice(btcPriceData?.current_price?.usd)} </span>
                 <span className="text percent">{formatPlusMinus(btcPriceData?.price_change_percentage_24h)}</span>
-           </div>
-           <div className="chart">
-               <div className="chart_title">
+            </div>
+            <div className="chart">
+                <div className="chart_title">
                     <div className="help_title">Bitcoin Price History</div>
                     {!isMobile && <div className="time">
                         <span className={`text ${day == 1 ? "active" : ""}`} onClick={() => setDay(1)}>24h</span>
@@ -93,14 +93,14 @@ export const CalculatorSecond = () => {
                         <span className={`text ${day == 365 ? "active" : ""}`} onClick={() => setDay(365)}>1y</span>
                     </div>}
                     {isMobile && <><select className="text time">
-                            <option>24h</option>
-                            <option>1w</option>
-                            <option>1m</option>
-                            <option>1y</option>
-                        </select>
+                        <option>24h</option>
+                        <option>1w</option>
+                        <option>1m</option>
+                        <option>1y</option>
+                    </select>
                         <i className="arrow right" /></>}
-               </div>
-                <Chart priceHistory={priceHistory}/>
+                </div>
+                <Chart priceHistory={priceHistory} />
             </div>
         </section>
     )

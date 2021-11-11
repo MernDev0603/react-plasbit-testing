@@ -1,24 +1,15 @@
 
-import { Route, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Route, NavLink } from 'react-router-dom';
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { PrivacyNotice } from '../components/privacy/PrivacyNotice';
 import { PrivacyEu } from '../components/privacy/PrivacyEu';
 import { PrivacyCookie } from '../components/privacy/PrivacyCookie';
-import { PrivacyExercise } from '../components/privacy/PrivacyExercise';
 
 import "./Privacy.css"
 
 export const Privacy = () => {
-
-    const [tab, setTab] = useState(null)
-
-    useEffect(() => {
-        const path = window.location.pathname.split('/')[2]
-        setTab(path)
-    })
 
     return (
         <div className="App">
@@ -26,32 +17,20 @@ export const Privacy = () => {
             <main>
                 <section className="privacy">
                     <div className="tabs">
-                        <Link to="/privacy/notice"
-                            className={`tab text ${tab == 'notice' ? 'active' : ''}`}
-                            onClick={() => setTab('privacy')}>
+                        <NavLink to="/privacy/notice" className="tab text" activeClassName="active" >
                             PRIVACY NOTICE
-                        </Link>
-                        <Link to="/privacy/eu"
-                            className={`tab text ${tab == 'eu' ? 'active' : ''}`}
-                            onClick={() => setTab('eu')}>
+                        </NavLink>
+                        <NavLink to="/privacy/eu" className="tab text" activeClassName="active" >
                             EU PRIVACY NOTICE
-                        </Link>
-                        <Link to="/privacy/cookie"
-                            className={`tab text ${tab == 'cookie' ? 'active' : ''}`}
-                            onClick={() => setTab('cookie')}>
+                        </NavLink>
+                        <NavLink to="/privacy/cookie" className="tab text" activeClassName="active" >
                             COOKIE NOTICE
-                        </Link>
-                        <Link to="/privacy/exercise"
-                            className={`tab text ${tab == 'exercise' ? 'active' : ''}`}
-                            onClick={() => setTab('exercise')}>
-                            EXERCISE YOUR RIGHTS
-                        </Link>
+                        </NavLink>
                     </div>
                     <div className="tabs_content">
                         <Route component={PrivacyNotice} path="/privacy/notice" />
                         <Route component={PrivacyEu} path="/privacy/eu" />
                         <Route component={PrivacyCookie} path="/privacy/cookie" />
-                        <Route component={PrivacyExercise} path="/privacy/exercise" />
                     </div>
                 </section>
             </main>

@@ -2,10 +2,21 @@
     background-size: cover;
 }
 
+.calculator_first img {
+    z-index: -1;
+    position: absolute;
+    width: 103%;
+    min-width: 1800px;
+    height: 1030px;
+    margin: 0 auto;
+    margin-top: -135px;
+    left: 50%;
+}
+
 .calculator_first .calculator_container {
     width: 80%;
-    margin: -135px auto 0;
-    padding: 150px 0 360px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .calculator_first .main_title {
@@ -55,7 +66,8 @@
     border: none;
 }
 
-.calculator_first input:focus, select:focus {
+.calculator_first input:focus,
+select:focus {
     outline: var(--lightBlue) !important;
 }
 
@@ -71,7 +83,26 @@
     height: 50px;
     margin-left: -100px;
     width: 100px;
-    padding: 14px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.calculator_first .currency .suffix span {
+    align-self: center;
+}
+
+.calculator_first .react-autosuggest__container {
+    margin-top: 10px;
+    position: absolute;
+}
+
+.calculator_first .react-autosuggest__input {
+    font-weight: 500;
+}
+
+.calculator_first .react-autosuggest__suggestions-container {
+    width: 100%;
 }
 
 .calculator_first .bottom {
@@ -81,6 +112,7 @@
 .calculator_first .bottom span {
     margin-right: 20px;
     color: white;
+    cursor: pointer;
 }
 
 .calculator_first .bottom span.active {
@@ -89,12 +121,22 @@
 
 @media (max-width: 768px) {
     .calculator_first .calculator_container {
-        padding: 100px 0;
+        padding: 0;
+        width: 90%;
         text-align: center;
+    }
+
+    .calculator_first img {
+        margin-left: 0 !important;
+        width: auto;
+        height: 935px;
+        left: 0;
+        min-width: 0;
     }
 
     .calculator_first .main_title {
         margin-bottom: 20px;
+        padding: 0;
     }
 
     .calculator_first .card {

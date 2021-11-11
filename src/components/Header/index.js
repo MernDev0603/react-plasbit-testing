@@ -24,7 +24,7 @@ const menus = [
             { 'title': 'Careers', 'icon': 'careers.svg', 'link': '/careers' },
             { 'title': 'Privacy', 'icon': 'privacy.svg', 'link': '/privacy/notice' },
             { 'title': 'Cardholder Agreement', 'icon': 'cardholder_agreement.svg', 'link': '/card' },
-            { 'title': 'Legal', 'icon': 'legal.svg', 'link': '/legal' },
+            { 'title': 'Legal', 'icon': 'legal.svg', 'link': '/legal/term' },
             { 'title': 'Contact Us', 'icon': 'contact_us.svg', 'link': '/contact' },
         ]
     }

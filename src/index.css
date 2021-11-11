@@ -2,6 +2,7 @@
 	--darkBlue: #082848;
 	--lightBlue: #00abff;
 	--textBlue: #283957;
+	--lightGrey: #eaebee;
 }
 
 html,
@@ -397,8 +398,8 @@ li {
 	}
 
 	.help_title {
-        font-size: 28px;
-    }
+		font-size: 28px;
+	}
 
 	.title {
 		font-size: 28px;
