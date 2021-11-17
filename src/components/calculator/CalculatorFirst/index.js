@@ -4,6 +4,7 @@ import axios from "axios";
 import SelectCurrency from 'react-select-currency'
 import './First.css'
 import { getImg, useResize } from '../../../hook/useCustomHook'
+import { CurrencyList } from './CurrencyList'
 
 
 const setInputFilter = (textbox, inputFilter) => {
@@ -31,8 +32,10 @@ export const CalculatorFirst = () => {
     const input = useRef(null);
     const [btcPrice, setBtcPrice] = useState(0);
     const [timePrice, setTimePrice] = useState(0);
-    const [currency, setCurrency] = useState('eur');
+    const [currency, setCurrency] = useState('USD');
     const baseURL = `https://api.coingecko.com/api/v3/coins/bitcoin`;
+
+    const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
         setInputFilter(inputBtc.current, function (value) {
@@ -48,18 +51,18 @@ export const CalculatorFirst = () => {
 
         img.current.style.marginLeft = `-${window.innerWidth / 2 + (window.innerWidth < 1650 ? 230 : 10)}px`;
 
-        document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
-        document.querySelector('.react-autosuggest__input').placeholder = "Search for your currency"
-        document.querySelector('.react-autosuggest__input').style.width = document.querySelector('div.currency').clientWidth + "px";
+        // document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
+        // document.querySelector('.react-autosuggest__input').placeholder = "Search for your currency"
+        // document.querySelector('.react-autosuggest__input').style.width = document.querySelector('div.currency').clientWidth + "px";
     });
 
     const handleCurrency = () => {
-        document.querySelector('.react-autosuggest__container input').style.visibility = "visible"
-        document.querySelector('.react-autosuggest__container input').value = ""
-        document.querySelector('.react-autosuggest__container input').focus();
-        document.querySelector('.react-autosuggest__container input').addEventListener('blur', function () {
-            this.style.visibility = "hidden"
-        })
+        // document.querySelector('.react-autosuggest__container input').style.visibility = "visible"
+        // document.querySelector('.react-autosuggest__container input').value = ""
+        // document.querySelector('.react-autosuggest__container input').focus();
+        // document.querySelector('.react-autosuggest__container input').addEventListener('blur', function () {
+        //     this.style.visibility = "hidden"
+        // })
     }
 
     const handleBtcAmount = () => {
@@ -69,7 +72,7 @@ export const CalculatorFirst = () => {
 
     const onSelectedCurrency = e => {
         console.log(e.target.value)
-        document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
+        // document.querySelector('.react-autosuggest__container input').style.visibility = "hidden"
     }
 
     return (
@@ -96,15 +99,16 @@ export const CalculatorFirst = () => {
                         </div>
                     </div>
                     {!isMobile && <div className="text_white">=</div>}
-                    <div className="currency">
+                    <div className="currency currency_width">
                         <div className="text label text_blue">
                             Amount in selected currency
                         </div>
                         <div className="input">
                             <input type="text" value={btcPrice} disabled />
-                            <p className="text suffix" onClick={handleCurrency}><span>USD</span></p>
+                            <p className="text suffix" onClick={() => setIsActive(!isActive)}><span>{currency} &#9660;</span></p>
                         </div>
-                        <SelectCurrency onChange={onSelectedCurrency} />
+                        <CurrencyList setCurrency={setCurrency} isActive={isActive} setIsActive={setIsActive} />
+                        {/* <SelectCurrency onChange={onSelectedCurrency} /> */}
                         <div className="text bottom">
                             <span className={(currency == "usd") ? "active" : ""}>USD</span>
                             <span className={(currency == "eur") ? "active" : ""}>EUR</span>

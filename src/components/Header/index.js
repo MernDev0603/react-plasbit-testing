@@ -137,7 +137,7 @@ function Header() {
                                 <option>btc/usd — 45 514.00 $</option>
                             </select>
                         </div> */}
-                        <Link to="/card" className={`btn active $"header_btn"`}>Get Started</Link>
+                        <Link to="/home" className={`btn active $"header_btn"`}>Get Started</Link>
                     </nav>
                     <span className="nav_toggle" onClick={toggleBurger}>
                         <span className={`nav_toggle-item ${isDark ? 'dark' : ''}`}></span>

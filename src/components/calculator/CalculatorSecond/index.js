@@ -17,20 +17,20 @@ export const CalculatorSecond = () => {
     const baseURL1 = "https://api.coingecko.com/api/v3/coins/bitcoin";
 
     useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            const data = response.data;
-            let prices = [];
-            prices = data?.prices?.map((item) => ({
-                date: formatDate(item[0]),
-                price: item[1].toFixed(2)
-            }))
-            setPriceHistory(prices);
-        });
+        // axios.get(baseURL).then((response) => {
+        //     const data = response.data;
+        //     let prices = [];
+        //     prices = data?.prices?.map((item) => ({
+        //         date: formatDate(item[0]),
+        //         price: item[1].toFixed(2)
+        //     }))
+        //     setPriceHistory(prices);
+        // });
 
-        axios.get(baseURL1).then((response) => {
-            const data = response.data.market_data;
-            setBtcPriceData(data);
-        })
+        // axios.get(baseURL1).then((response) => {
+        //     const data = response.data.market_data;
+        //     setBtcPriceData(data);
+        // })
 
     }, [day]);
 

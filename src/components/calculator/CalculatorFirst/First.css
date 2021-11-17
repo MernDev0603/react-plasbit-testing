@@ -92,16 +92,7 @@ select:focus {
     align-self: center;
 }
 
-.calculator_first .react-autosuggest__container {
-    margin-top: 10px;
-    position: absolute;
-}
-
-.calculator_first .react-autosuggest__input {
-    font-weight: 500;
-}
-
-.calculator_first .react-autosuggest__suggestions-container {
+.calculator_first .currency_container {
     width: 100%;
 }
 

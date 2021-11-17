@@ -1,0 +1,60 @@
+.dashboard_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.dashboard_header .logo img {
+    width: 162px;
+}
+
+.dashboard_header .right_side {
+    display: flex;
+}
+
+.dashboard_header .search,
+.dashboard_header .lang,
+.dashboard_header .notify,
+.dashboard_header .profile-panel {
+    padding: 0 15px;
+    align-self: center;
+    display: flex;
+}
+
+.dashboard_header .ant-input-affix-wrapper,
+.dashboard_header .ant-input-affix-wrapper>input.ant-input {
+    border-radius: 10px;
+    background: var(--lightGrey);
+    border: none;
+    font-size: 15px;
+}
+
+.dashboard_header .search {
+    width: 500px;
+}
+
+.dashboard_header .lang,
+.dashboard_header .notify {
+    border-right: 1px solid #aaa;
+}
+
+.dashboard_header .ant-avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.dashboard_header .profile-trigger {
+    cursor: pointer;
+    color: var(--darkBlue);
+}
+
+.dashboard_footer {
+    width: 100%;
+    background: #ddd !important;
+    text-align: center;
+    padding: 10px 50px !important;
+}
+
+.dashboard_footer .text {
+    font-size: 18px !important;
+}
