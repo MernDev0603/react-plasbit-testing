@@ -3,15 +3,8 @@ import { Button, Drawer, Layout, Menu, Typography } from 'antd';
 //import 'antd/dist/antd.css';
 import { Link } from 'react-router-dom';
 // import i18n from 'meteor/universe:i18n';
-import CreditCardOutlined from '@ant-design/icons/CreditCardOutlined';
 import MenuFoldOutlined from '@ant-design/icons/MenuFoldOutlined';
 import MenuUnfoldOutlined from '@ant-design/icons/MenuUnfoldOutlined';
-import NumberOutlined from '@ant-design/icons/NumberOutlined';
-import PicRightOutlined from '@ant-design/icons/PicRightOutlined';
-import SafetyCertificateOutlined from '@ant-design/icons/SafetyCertificateOutlined';
-import TransactionOutlined from '@ant-design/icons/TransactionOutlined';
-import WalletOutlined from '@ant-design/icons/WalletOutlined';
-import HomeOutlined from '@ant-design/icons/HomeOutlined';
 import { DashboardHeader } from './DashboardHeader';
 // import { useDispatch } from 'react-redux';
 // import { setBreadCrumb } from '../redux/actions';
@@ -45,6 +38,7 @@ export const DashboardView = (props) => {
 
     const menu = () => {
         return <Menu
+            className="menu_container"
             mode="inline"
             style={{ width: '250px' }}
             selectedKeys={selectedKeys}
@@ -53,7 +47,7 @@ export const DashboardView = (props) => {
                 setDrawerVisible(false);
             }}
             style={{
-                height: '100%',
+                width: '100%',
                 borderRight: 0,
             }}
         >
@@ -105,7 +99,7 @@ export const DashboardView = (props) => {
                 <Link to="/home/verifications" />
             </Menu.Item>
 
-            <div className="divider" key="divider">
+            <div className="dashboard_divider" key="divider">
                 OTHERS
             </div>
 
@@ -133,7 +127,7 @@ export const DashboardView = (props) => {
                 <Link to="/home/settings" />
             </Menu.Item>
 
-            <Menu.Item key="/home/logout" className="logout" style={{ position: 'absolute', bottom: '10px' }}>
+            <Menu.Item key="/home/logout" className="logout">
                 <img src={getImg('navbar/logout.png')} />
                 <span>Logout</span>
                 <Link to="/home/dashboard" />
@@ -143,27 +137,18 @@ export const DashboardView = (props) => {
 
     return (
         <Layout style={{ minHeight: '100vh' }} className="dashboard">
-            <Header style={{
-                background: 'white',
-                padding: 0,
-                height: 80,
-                lineHeight: '78px'
-            }}>
-                <DashboardHeader admin={false} />
-                {isMobile && <Button type="default" onClick={() => setDrawerVisible(true)}
-                >
-                    {drawerVisible && <MenuUnfoldOutlined />}
-                    {!drawerVisible && <MenuFoldOutlined />}
-                </Button>}
+            <Header className="header_container">
+                <DashboardHeader admin={false} drawerVisible={drawerVisible} setDrawerVisible={setDrawerVisible} />
             </Header>
             <Layout>
                 {isMobile && <Drawer
-                    title={userFullName}
+                    className="dashboard_sidebar"
                     placement="left"
                     closable={true}
                     onClose={() => setDrawerVisible(false)}
                     visible={drawerVisible}
                     key="left"
+                    style={{ marginTop: '60px' }}
                 >{menu()}</Drawer>}
                 {!isMobile && <Sider width={200} collapsed={false}>{menu()}</Sider>}
 

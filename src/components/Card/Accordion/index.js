@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Chevron } from "./Chevron";
 
+import { Chevron } from "./Chevron";
+import './Accordion.css';
 
 export const Accordion = (props) => {
     const [setActive, setActiveState] = useState("");
@@ -20,19 +21,21 @@ export const Accordion = (props) => {
     }
 
     return (
-        <div className="accordion_container">
+        <div className="accordion_text">
             <div className={`accordion ${setActive}`} onClick={toggleAccordion}>
-                <p className="accordion_title">{props.faq.title}</p>
-                <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />
+                <p className="accordion_title">{props.obj.title}</p>
+                {props.arrow && <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />}
             </div>
             <div
                 ref={content}
                 style={{ maxHeight: `${setHeight}` }}
                 className="accordion_content text_white"
             >
-                <div className="accordion__text">
-                    <div>{props.faq.content}</div>
-                </div>
+                {props.obj.content.map((text, index) => (
+                    <div className="text" key={index}>
+                        <div>{text}</div>
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -61,7 +61,7 @@ export const DashboardHeader = (props) => {
   // }, []);
 
   const getProfile = () => {
-    return <Space direction="vertical">
+    return <Space direction="vertical" className="profile_modal">
       <Link to={(props.admin ? '/admin' : '/home') + '/user-profile'} onClick={() => setIsProfileOpened(false)}>User
         Profile</Link>
       <Link to={(props.admin ? '/admin' : '/home') + '/change-password'} onClick={() => setIsProfileOpened(false)}>Change
@@ -69,27 +69,35 @@ export const DashboardHeader = (props) => {
       <Link to={(props.admin ? '/admin' : '/home') + '/support'} onClick={() => setIsProfileOpened(false)}>Help &amp; Support</Link>
 
       <Button>Logout</Button>
-      <div>Version: 0.0.8</div>
+      <div className="version">Version: 0.0.8</div>
     </Space>;
   };
 
   return (
     <header className="dashboard_header">
+      {isMobile && <div className="toggle" onClick={() => props.setDrawerVisible(true)}
+      >
+        {props.drawerVisible && <span className="nav_toggle" ></span>}
+        {!props.drawerVisible && <span className="nav_toggle" >
+          <span className="nav_toggle-item"></span>
+        </span>}
+      </div>}
       <Link to="/" className="logo">
         <img src={getImg('navbar/logo.svg')} alt="logo" />
       </Link>
       <div className="right_side">
-        <div className="search">
+        {!isMobile && <div className="search">
           <Input
             placeholder="Search cryptocurrency, news, etc..."
             suffix={
               <SearchOutlined />
             }
           />
-        </div>
-        <div className="lang" >
+        </div>}
+        {isMobile && <div className="search"><SearchOutlined style={{ fontSize: 24, color: 'var(--darkBlue)' }} /></div>}
+        {!isMobile && <div className="lang" >
           <img src={getImg('navbar/lang.svg')} alt="" />
-        </div>
+        </div>}
         <div className="notify">
           <Badge dot={true}>
             <BellOutlined style={{ fontSize: 24, color: 'var(--darkBlue)' }} />
@@ -101,7 +109,7 @@ export const DashboardHeader = (props) => {
           }}
             content={getProfile} trigger="click">
             <div className="profile-trigger">
-              <Avatar src={<Image src={getImg('upload/avatar/default.png')} style={{ width: 45 }} />} />
+              <Avatar src={getImg('upload/avatar/default.png')} style={{ width: 35 }} />
               {!isMobile && <><span className="text"> {name}</span>
                 <DownOutlined style={!isProfileOpened ? { marginLeft: '0.4em' } : {
                   marginLeft: '0.4em',
