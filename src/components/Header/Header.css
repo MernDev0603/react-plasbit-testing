@@ -123,11 +123,10 @@
     cursor: pointer;
 }
 
-.header .btc::before,
-.header .btc_mob::before {
+.header .btc::before {
     position: absolute;
     content: "";
-    top: 5px;
+    top: 11px;
     right: 0;
     width: 5px;
     height: 5px;
@@ -137,8 +136,7 @@
     transform: rotate(45deg);
 }
 
-.header .btc span,
-.btc_mob span {
+.header .btc .ant-select {
     cursor: pointer;
     text-transform: uppercase;
     -webkit-appearance: none;
@@ -147,6 +145,23 @@
     border: 0;
     font-size: 18px;
     font-weight: bold;
+}
+
+.header .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+}
+
+.header .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+    box-shadow: none;
+}
+
+.header .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+    padding-right: 0;
+}
+
+.header .ant-select-arrow {
+    display: none;
 }
 
 .header .shadow,

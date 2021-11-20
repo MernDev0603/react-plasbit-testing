@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { Select } from 'antd';
 
 import { Dropdown } from '../Dropdown'
 import logo from 'assets/img/logo.svg'
-import logoWhite from 'assets/img/logo-card.svg'
+import logoWhite from 'assets/img/btc.svg'
 import lang from 'assets/img/lang.svg'
+import btc from 'assets/img/btc.svg'
 import { useResize } from 'hook/useCustomHook'
 import { Accordion } from 'components/Accordion'
 import './Header.css'
+
+const { Option } = Select;
 const menus = [
     {
         'title': 'Products',
@@ -94,12 +98,21 @@ function Header() {
                         </ul> */}
                     </div>
                     <div className="btc" style={{ color: color }}>
-                        <span>btc/usd — 45 514.00 $</span>
+                        {/* <span>btc/usd — 45 514.00 $</span> */}
                         {/* <select>
-                            <option>btc/usd — 45 514.00 $</option>
-                            <option>btc/usd — 45 514.00 $</option>
-                            <option>btc/usd — 45 514.00 $</option>
+                            <option>BTC/USD — 45 514.00 $</option>
+                            <option>ETH/USD — 45 514.00 $</option>
+                            <option>ADA/USD — 45 514.00 $</option>
+                            <option>LTC/USD — 45 514.00 $</option>
+                            <option>USDC/USD — 45 514.00 $</option>
                         </select> */}
+                        <Select defaultValue="BTC" style={{ width: "auto" }}>
+                            <Option value="BTC"><img src={btc} style={{ width: 25 }} /> BTC/USD - 45 514.00 $</Option>
+                            <Option value="ETH"><img src={btc} style={{ width: 25 }} /> ETH/USD - 3 514.00 $</Option>
+                            <Option value="ADA"><img src={btc} style={{ width: 25 }} /> ADA/USD - 0.23 $</Option>
+                            <Option value="LTC"><img src={btc} style={{ width: 25 }} /> LTC/USD - 2.00 $</Option>
+                            <Option value="USDC"><img src={btc} style={{ width: 25 }} /> USDC/USD - 1.00 $</Option>
+                        </Select>
                     </div>
                     <nav className={burger ? "nav_active" : "nav"}>
                         {isMobile && <img onClick={toggleBurger} alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTE0LjcgMS4zYy0uNC0uNC0xLS40LTEuNCAwTDggNi42IDIuNyAxLjNjLS40LS40LTEtLjQtMS40IDBzLS40IDEgMCAxLjRMNi42IDhsLTUuMyA1LjNjLS40LjQtLjQgMSAwIDEuNC4yLjIuNC4zLjcuM3MuNS0uMS43LS4zTDggOS40bDUuMyA1LjNjLjIuMi41LjMuNy4zcy41LS4xLjctLjNjLjQtLjQuNC0xIDAtMS40TDkuNCA4bDUuMy01LjNjLjQtLjQuNC0xIDAtMS40eiIgZmlsbD0iIzU2NWQ2ZCIvPjwvc3ZnPg==" />}
