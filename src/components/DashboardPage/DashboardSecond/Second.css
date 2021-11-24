@@ -1,0 +1,46 @@
+.dashboard_second {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wallet {
+    min-height: 300px;
+    width: 40%;
+    min-width: 318px;
+}
+
+.wallet .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--bgDashboard);
+    height: 73px;
+}
+
+.wallet .row .coin,
+.wallet .row .font_15,
+.wallet .row .font_20 {
+    width: 23.3%;
+}
+
+.wallet .row:nth-child(2) {
+    border: none;
+}
+
+.wallet .row .coin {
+    display: flex;
+    align-items: center;
+}
+
+.chart {
+    width: 60%;
+    padding: 0 20px 0 50px;
+}
+
+.chart .pie_chart {
+    height: 300px;
+    width: 95%;
+}

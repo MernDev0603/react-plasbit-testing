@@ -1,4 +1,4 @@
-.item {
+.trend .item {
 	border-radius: 10px;
 	background-color: #f2f8ff;
 	padding: 25px 15px;
@@ -7,39 +7,39 @@
 	flex-direction: column;
 }
 
-.item div {
+.trend .item div {
 	height: initial;
 }
 
-.item_top {
+.trend .item_top {
 	display: flex;
 	align-items: center;
 }
 
-.item_top_inner {
+.trend .item_top_inner {
 	margin-left: 12px;
 }
 
-.item_top_inner p {
+.trend .item_top_inner p {
 	font-size: 11px;
 	color: #717171;
 }
 
-.item_top_inner span {
+.trend .item_top_inner span {
 	font-size: 14px;
 	color: var(--textBlue);
 	font-weight: bold;
 	margin-bottom: 5px;
 }
 
-.item_img {
+.trend .item_img {
 	margin: 25px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.info {
+.trend .info {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -47,7 +47,7 @@
 	margin-bottom: 20px;
 }
 
-.info span {
+.trend .info span {
 	margin-left: 12px;
 	font-size: 12px;
 	color: #00b450;
@@ -58,20 +58,20 @@
 	background-color: #b0fbce;
 }
 
-.price {
+.trend .price {
 	font-size: 30px;
 	line-height: 55px;
 	color: var(--textBlue);
 	font-weight: bold;
 }
 
-.slider_btn {
+.trend .slider_btn {
 	margin-top: auto;
 	min-width: auto;
 	width: 100%;
 }
 
-.volume {
+.trend .volume {
 	margin-top: 22px;
 	font-size: 11px;
 	color: #717171;

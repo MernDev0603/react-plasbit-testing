@@ -31,17 +31,17 @@
     color: var(--textBlue);
 }
 
-.chart {
+.calculator_second .chart {
     margin-top: 80px;
 }
 
-.chart_title {
+.calculator_second .chart_title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.chart_title span {
+.calculator_second .chart_title span {
     padding: 10px 40px;
     border-radius: 30px;
     border: 2px solid lightgrey;
@@ -49,12 +49,12 @@
     cursor: pointer;
 }
 
-.chart_title span.active {
+.calculator_second .chart_title span.active {
     color: var(--lightBlue);
     border-color: var(--lightBlue);
 }
 
-.arrow {
+.calculator_second .arrow {
     border: solid black;
     border-width: 0 2px 2px 0;
     display: inline-block;
@@ -72,16 +72,16 @@
         width: 300px;
     }
 
-    .chart {
+    .calculator_second .chart {
         margin-top: 30px;
         text-align: center;
     }
 
-    .chart_title {
+    .calculator_second .chart_title {
         display: block;
     }
 
-    select.time {
+    .calculator_second select.time {
         width: 80%;
         height: 45px;
         margin-top: 20px;
@@ -90,7 +90,7 @@
         appearance: none;
     }
 
-    .chart .right {
+    .calculator_second .chart .right {
         left: -30px;
         top: -3px;
     }

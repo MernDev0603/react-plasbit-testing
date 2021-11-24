@@ -1,0 +1,39 @@
+.dashboard_third {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.dashboard_third .card img {
+    width: 440px;
+}
+
+.dashboard_third .details .box {
+    background: #f3f6fb;
+    border-radius: 15px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard_third .details .box div {
+    text-align: center;
+}
+
+.dashboard_third .description {
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+}
+
+.dashboard_third .description .box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f3f6fb;
+    width: 220px;
+    padding: 20px 5px 20px 10px;
+}

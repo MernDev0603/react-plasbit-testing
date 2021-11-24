@@ -1,10 +1,3 @@
-:root {
-	--darkBlue: #082848;
-	--lightBlue: #00abff;
-	--textBlue: #283957;
-	--lightGrey: #eaebee;
-}
-
 html,
 body {
 	font-family: "Proxima Nova" !important;

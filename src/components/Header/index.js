@@ -4,7 +4,7 @@ import { Select } from 'antd';
 
 import { Dropdown } from '../Dropdown'
 import logo from 'assets/img/logo.svg'
-import logoWhite from 'assets/img/btc.svg'
+import logoWhite from 'assets/img/logo-card.svg'
 import lang from 'assets/img/lang.svg'
 import btc from 'assets/img/btc.svg'
 import { useResize } from 'hook/useCustomHook'

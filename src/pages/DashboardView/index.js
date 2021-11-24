@@ -99,7 +99,7 @@ export const DashboardView = (props) => {
                 <Link to="/home/verifications" />
             </Menu.Item>
 
-            <div className="dashboard_divider" key="divider">
+            <div className="dashboard_divider">
                 OTHERS
             </div>
 
@@ -136,7 +136,7 @@ export const DashboardView = (props) => {
     };
 
     return (
-        <Layout style={{ minHeight: '100vh' }} className="dashboard">
+        <Layout style={{ minHeight: '100vh' }} className="dashboard_view">
             <Header className="header_container">
                 <DashboardHeader admin={false} drawerVisible={drawerVisible} setDrawerVisible={setDrawerVisible} />
             </Header>
@@ -158,6 +158,7 @@ export const DashboardView = (props) => {
                         className="site-layout-background"
                         style={{
                             padding: 24,
+                            paddingBottom: 50,
                             margin: 0,
                             minHeight: "calc(100% - 56px)",
                         }}

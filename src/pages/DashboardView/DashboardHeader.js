@@ -13,7 +13,6 @@ import { Link } from 'react-router-dom';
 // import { UserCards, UserCardStatuses } from '../../api/userCards/userCards';
 // import { getRemoteDataSet, GlobalActions } from '../redux/actions';
 // import { useDispatch } from 'react-redux';
-import './Header.css'
 
 const { Header, Sider, Content } = Layout;
 const { Text, Title } = Typography;

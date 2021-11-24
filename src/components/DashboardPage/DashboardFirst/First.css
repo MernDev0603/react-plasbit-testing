@@ -1,0 +1,26 @@
+.dashboard_first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard_first .left {
+    width: 889px;
+    margin-right: 20px;
+}
+
+.dashboard_first .banner {
+    width: 100%;
+    padding: 40px 30px;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.dashboard_first .banner .font_40 {
+    margin-bottom: 32px;
+}
+
+.dashboard_first .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
