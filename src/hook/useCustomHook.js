@@ -4,18 +4,18 @@ export const useDetectOutsideClick = (el, initialState) => {
     const [isActive, setIsActive] = useState(initialState);
 
     useEffect(() => {
-        const onClick = e => {
+        const handler = e => {
             if (el.current !== null && !el.current.contains(e.target)) {
                 setIsActive(!isActive);
             }
         };
 
         if (isActive) {
-            window.addEventListener("click", onClick);
+            window.addEventListener("mouseover", handler);
         }
 
         return () => {
-            window.removeEventListener("click", onClick);
+            window.removeEventListener("mouseover", handler);
         };
     }, [isActive, el]);
 

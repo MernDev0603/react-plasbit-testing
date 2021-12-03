@@ -7,7 +7,7 @@ export const DashboardFourth = () => {
     return (
         <div className="dashboard_fourth">
             <div className="wallet card">
-                <div className="font_25 font_bold light_blue mb_20">Recent Wallet Activity</div>
+                <div className="font_25 font_bold light_blue mb_20 text_center">Recent Wallet Activity</div>
                 <div className="row">
                     <div className="date_time font_bold text_center">
                         <div className="date font_18">
@@ -19,7 +19,25 @@ export const DashboardFourth = () => {
                     </div>
                     <div className="sent font_bold">
                         <div className="font_18">BTC Sent</div>
-                        <div className="font_15">TXID: XXXXXX</div>
+                        <div className="font_15">TXID: XXXX...</div>
+                    </div>
+                    <div className="money font_bold">
+                        <div className="font_18">$39,908.83</div>
+                        <div className="font_15 text_right">1.12345678</div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="date_time font_bold text_center">
+                        <div className="date font_18">
+                            03/11/2021
+                        </div>
+                        <div className="time font_15">
+                            11:24:00
+                        </div>
+                    </div>
+                    <div className="sent font_bold">
+                        <div className="font_18">BTC Sent</div>
+                        <div className="font_15">TXID: XXXX...</div>
                     </div>
                     <div className="money font_bold">
                         <div className="font_18">$3,690.83</div>
@@ -37,7 +55,7 @@ export const DashboardFourth = () => {
                     </div>
                     <div className="sent font_bold">
                         <div className="font_18">BTC Sent</div>
-                        <div className="font_15">TXID: XXXXXX</div>
+                        <div className="font_15">TXID: XXXX...</div>
                     </div>
                     <div className="money font_bold">
                         <div className="font_18">$3,690.83</div>
@@ -55,7 +73,7 @@ export const DashboardFourth = () => {
                     </div>
                     <div className="sent font_bold">
                         <div className="font_18">BTC Sent</div>
-                        <div className="font_15">TXID: XXXXXX</div>
+                        <div className="font_15">TXID: XXXX...</div>
                     </div>
                     <div className="money font_bold">
                         <div className="font_18">$3,690.83</div>
@@ -73,25 +91,7 @@ export const DashboardFourth = () => {
                     </div>
                     <div className="sent font_bold">
                         <div className="font_18">BTC Sent</div>
-                        <div className="font_15">TXID: XXXXXX</div>
-                    </div>
-                    <div className="money font_bold">
-                        <div className="font_18">$3,690.83</div>
-                        <div className="font_15 text_right">1.0000</div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="date_time font_bold text_center">
-                        <div className="date font_18">
-                            03/11/2021
-                        </div>
-                        <div className="time font_15">
-                            11:24:00
-                        </div>
-                    </div>
-                    <div className="sent font_bold">
-                        <div className="font_18">BTC Sent</div>
-                        <div className="font_15">TXID: XXXXXX</div>
+                        <div className="font_15">TXID: XXXX...</div>
                     </div>
                     <div className="money font_bold">
                         <div className="font_18">$3,690.83</div>
@@ -99,11 +99,11 @@ export const DashboardFourth = () => {
                     </div>
                 </div>
                 <div className="row font_15 font_bold view_more">
-                    View More Transactions<span className="arrow ml_10"></span>
+                    View More Activities<span className="arrow ml_10"></span>
                 </div>
             </div>
             <div className="transaction card">
-                <div className="font_25 font_bold light_blue mb_20">Recent Card Transactions</div>
+                <div className="font_25 font_bold light_blue mb_20 text_center">Recent Card Transactions</div>
                 <div className="row">
                     <div className="name font_bold">
                         <div className="font_18">Dropbox</div>
@@ -194,7 +194,7 @@ export const DashboardFourth = () => {
                 </div>
             </div>
             <div className="card verification">
-                <div style={{ flexGrow: 1 }} className="font_25 font_bold light_blue mb_20">Account Verification</div>
+                <div style={{ flexGrow: 1 }} className="font_25 font_bold light_blue mb_20 text_center">Account Verification</div>
                 <div style={{ flexGrow: 999 }} className="steps">
                     <div className="step">
                         <div className="icon verified">
@@ -236,7 +236,7 @@ export const DashboardFourth = () => {
                     </div>
                 </div>
                 <div style={{ flexGrow: 1 }} className="row font_15 font_bold view_more">
-                    View More Transactions<span className="arrow ml_10"></span>
+                    Verify your account<span className="arrow ml_10"></span>
                 </div>
             </div>
         </div>

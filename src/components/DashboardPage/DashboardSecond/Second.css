@@ -6,13 +6,12 @@
     justify-content: space-between;
 }
 
-.wallet {
-    min-height: 300px;
+.dashboard_second .wallet {
     width: 40%;
     min-width: 318px;
 }
 
-.wallet .row {
+.dashboard_second .wallet .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,27 +19,75 @@
     height: 73px;
 }
 
-.wallet .row .coin,
-.wallet .row .font_15,
-.wallet .row .font_20 {
-    width: 23.3%;
+.dashboard_second .wallet .row .coin {
+    width: 25%;
 }
 
-.wallet .row:nth-child(2) {
+.dashboard_second .wallet .row .amount {
+    width: 35%;
+}
+
+.dashboard_second .wallet .row .price {
+    width: 28%;
+}
+
+.dashboard_second .wallet .row:nth-child(2) {
     border: none;
 }
 
-.wallet .row .coin {
+.dashboard_second .wallet .row .coin {
     display: flex;
     align-items: center;
 }
 
-.chart {
+
+.dashboard_second .wallet .row .coin img {
+    width: 34px;
+    height: 34px;
+}
+
+.dashboard_second .chart {
     width: 60%;
     padding: 0 20px 0 50px;
 }
 
-.chart .pie_chart {
+.dashboard_second .pie_chart {
     height: 300px;
-    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard_second .pie_chart .recharts-default-legend {
+    margin-top: 30px !important;
+}
+
+.dashboard_second .pie_chart .recharts-default-legend li {
+    margin: 25px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .dashboard_second {
+        flex-direction: column;
+    }
+
+    .dashboard_second .wallet,
+    .dashboard_second .chart {
+        width: 100%;
+    }
+
+    .dashboard_second .wallet {
+        min-width: auto;
+    }
+
+    .dashboard_second .wallet .row .coin,
+    .dashboard_second .wallet .row .font_20 {
+        width: auto;
+    }
+
+    .dashboard_second .pie_chart {
+        height: auto;
+    }
 }

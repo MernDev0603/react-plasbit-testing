@@ -1,6 +1,5 @@
 .coin_card {
-    height: 180px;
-    width: 380px;
+    height: 180.5px;
     padding: 20px;
     background: white;
     border-radius: 15px;
@@ -35,6 +34,11 @@
 .coin_card .info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.coin_card .info .up_down {
+    display: flex;
     align-items: center;
 }
 

@@ -3,6 +3,7 @@
     --lightBlue: #00abff;
     --textBlue: #283957;
     --lightGrey: #eaebee;
+    --grey: #97abbd;
     --textGreen: #5f9544;
     --textRed: #c93644;
     --bgDashboard: #e7eef8;
@@ -34,6 +35,10 @@
     color: var(--lightBlue);
 }
 
+.dark_blue {
+    color: var(--darkBlue);
+}
+
 .font_bold {
     font-weight: bold;
 }
@@ -45,7 +50,11 @@
 .font_40 {
     font-size: 40px;
     line-height: 45px;
-    font-weight: bold;
+}
+
+.font_38 {
+    font-size: 38px;
+    line-height: 43px;
 }
 
 .font_30 {

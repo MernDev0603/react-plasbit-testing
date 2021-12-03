@@ -5,7 +5,7 @@
 }
 
 .dashboard_fourth .card {
-    width: 375px;
+    width: 33%;
     min-height: 518px;
     background: white;
     padding: 30px 20px 0;
@@ -16,7 +16,7 @@
 }
 
 .dashboard_fourth .card:nth-child(2) {
-    margin: 0 10px;
+    margin: 0 50px;
 }
 
 .dashboard_fourth .card .row:nth-child(2) {
@@ -53,9 +53,13 @@
     background: var(--bgDashboard);
 }
 
-.wallet .date,
+.dashboard_fourth .wallet .date,
 .dashboard_fourth .wallet .time {
     padding: 3px;
+}
+
+.dashboard_fourth .wallet .sent {
+    width: 100px;
 }
 
 .dashboard_fourth .transaction .up {
@@ -75,7 +79,10 @@
 .dashboard_fourth .verification .step {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+
+.dashboard_fourth .verification .step .check {
+    align-self: center;
 }
 
 .dashboard_fourth .verification .step .icon {
@@ -85,7 +92,7 @@
     max-height: 52px;
     width: 52px;
     height: 52px;
-    border: 1px dotted var(--lightBlue);
+    border: 2px dotted var(--lightBlue);
     border-radius: 50%;
     padding: 3px;
     display: flex;
@@ -120,7 +127,7 @@
 
 .dashboard_fourth .verification .divider {
     height: 70px;
-    border-right: 2px dotted var(--lightBlue);
+    border-right: 3px dotted var(--lightBlue);
     width: 1px;
     margin-left: 26px;
 }
@@ -131,4 +138,27 @@
 
 .dashboard_fourth .verification .row {
     border: none;
+}
+
+@media (max-width: 768px) {
+    .dashboard_fourth {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .dashboard_fourth .card {
+        width: 100%;
+    }
+
+    .dashboard_fourth .card:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    .dashboard_fourth .card .font_18 {
+        font-size: 17px;
+    }
+
+    .dashboard_fourth .verification .step .description {
+        margin-left: 5px;
+    }
 }

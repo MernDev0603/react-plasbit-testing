@@ -99,9 +99,11 @@ export const DashboardView = (props) => {
                 <Link to="/home/verifications" />
             </Menu.Item>
 
-            <div className="dashboard_divider">
-                OTHERS
-            </div>
+            <Menu.Item key="/home/divider">
+                <div className="dashboard_divider">
+                    OTHERS
+                </div>
+            </Menu.Item>
 
             <Menu.Item key="/home/news">
                 <img src={getImg('navbar/news.png')} />
@@ -156,8 +158,17 @@ export const DashboardView = (props) => {
                     {/* <CustomBreadCrumb pathname={props.location.pathname} id={props.match?.params?.id} /> */}
                     <div
                         className="site-layout-background"
-                        style={{
-                            padding: 24,
+                        style={!isMobile ? {
+                            paddingTop: 24,
+                            paddingLeft: 24,
+                            paddingRight: 24,
+                            paddingBottom: 50,
+                            margin: 0,
+                            minHeight: "calc(100% - 56px)",
+                        } : {
+                            paddingLeft: 10,
+                            paddingRight: 10,
+                            paddingTop: 24,
                             paddingBottom: 50,
                             margin: 0,
                             minHeight: "calc(100% - 56px)",

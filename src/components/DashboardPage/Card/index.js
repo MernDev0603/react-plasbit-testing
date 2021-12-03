@@ -28,8 +28,8 @@ const getGraphByCurrencyName = (graph) => {
 }
 
 const getPercent = (percent) => {
-    if (parseInt(percent) > 0) return <span className="up"><img src={getImg('dashboard/dashboard/up.png')} />&nbsp; {percent} %</span>
-    return <span className="down"><img src={getImg('dashboard/dashboard/down.png')} />&nbsp; {percent} %</span>
+    if (parseInt(percent) > 0) return <span className="up_down up"><img src={getImg('dashboard/dashboard/up.png')} />&nbsp;<span> {percent} %</span></span>
+    return <span className="up_down down"><img src={getImg('dashboard/dashboard/down.png')} />&nbsp;<span> {percent} %</span></span>
 }
 
 export const Card = ({ icon, coinName, price, percent }) => {

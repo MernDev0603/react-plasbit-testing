@@ -9,6 +9,7 @@ import { Privacy } from './pages/Privacy';
 import { Calculator } from './pages/Calculator';
 import { Legal } from './pages/Legal';
 import { About } from './pages/About';
+import { Career } from './pages/Career';
 import { DashboardView } from './pages/DashboardView';
 import { DashboardPage } from './components/DashboardPage';
 import 'antd/dist/antd.css';
@@ -30,6 +31,7 @@ function App() {
 				<Route exact component={Calculator} path="/calculator" />
 				<Route component={Legal} path="/legal" />
 				<Route component={About} path="/about" />
+				<Route component={Career} path="/careers" />
 				<Redirect exact from="/home" to={{ pathname: '/home/dashboard' }} />
 				<DashboardView exact path="/home/dashboard" component={DashboardPage} isLoggedIn={isLoggedIn} isVerified={isVerified} admin={isAdmin} />
 				<DashboardView exact path="/home/wallet" component={DashboardPage} isLoggedIn={isLoggedIn} isVerified={isVerified} admin={isAdmin} />
